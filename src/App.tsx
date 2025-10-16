@@ -43,6 +43,7 @@ import SelfCareTracker from "./pages/SelfCareTracker";
 import ReflectionJournal from "./pages/ReflectionJournal";
 import RoutineBuilder from "./pages/RoutineBuilder";
 import Tracker from "./pages/Tracker"; // Import the new Tracker component
+import BedtimeScripts from "./pages/scripts"; // Import the new BedtimeScripts component
 
 
 const queryClient = new QueryClient();
@@ -110,7 +111,7 @@ const AppRoutes: React.FC = () => (
     <Route path="/guide/ch/10" element={<Chapter10 />} />
     <Route path="/guide/ch/11" element={<Chapter11 />} />
     <Route path="/log" element={<SleepLog />} />
-    <Route path="/tracker" element={<Tracker />} /> {/* New route for the form */}
+    <Route path="/tracker" element={<Tracker />} />
     <Route path="/self-care-tracker" element={<SelfCareTracker />} />
     <Route path="/journal-prompts" element={<ReflectionJournal />} />
     <Route path="/routine-builder" element={<RoutineBuilder />} />
@@ -121,6 +122,7 @@ const AppRoutes: React.FC = () => (
     <Route path="/tales/lantern-tree" element={<LanternTree />} />
     <Route path="/tales/cloud-painter" element={<CloudPainter />} />
     <Route path="/tales/willow" element={<Willow />} />
+    <Route path="/scripts" element={<BedtimeScripts />} /> {/* New route for Bedtime Scripts */}
     <Route path="/my-dreams" element={<div>My Dreams Page</div>} />
     <Route path="/settings" element={<div>Settings Page</div>} />
     <Route path="/logout" element={<div>Logging out...</div>} />

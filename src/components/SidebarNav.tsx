@@ -4,7 +4,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { BookText, LayoutDashboard, Palette, Sparkles } from "lucide-react";
+import { BookText, LayoutDashboard, Palette, Sparkles, ScrollText } from "lucide-react"; // Added ScrollText icon
 
 export const SidebarNav: React.FC = () => {
   const location = useLocation();
@@ -29,6 +29,11 @@ export const SidebarNav: React.FC = () => {
       title: "Moonlight Stories",
       href: "/tales/toc",
       icon: <Sparkles className="mr-2 h-4 w-4" />,
+    },
+    {
+      title: "Bedtime Scripts", // New navigation item
+      href: "/scripts",
+      icon: <ScrollText className="mr-2 h-4 w-4" />, // Icon for scripts
     },
   ];
 
