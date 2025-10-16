@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
 import { moonlightTales } from "@/utils/moonlightTalesContent";
 
 const MoonlightStories: React.FC = () => {
@@ -12,17 +12,24 @@ const MoonlightStories: React.FC = () => {
       <p className="text-lg mb-8 text-center text-gray-800">Discover enchanting stories to inspire sweet dreams. Click on a tale to begin reading!</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {moonlightTales.map((tale) => (
-          <Card key={tale.id} className="hover:shadow-lg transition-shadow duration-300 bg-white border-gold-400 border-2">
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold text-gray-900">{tale.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700 mb-4 line-clamp-3">{tale.description}</p>
-              <Link to={tale.route} className="text-lavender-500 hover:text-lavender-400 font-medium underline">
-                Read Story
-              </Link>
-            </CardContent>
-          </Card>
+          <Link to={tale.route} key={tale.id} className="block">
+            <Card 
+              className="relative h-64 flex flex-col justify-end p-4 overflow-hidden rounded-lg shadow-lg transition-shadow duration-300 hover:scale-[1.02]"
+              style={{ 
+                backgroundImage: `url(${tale.coverImage})`, 
+                backgroundSize: 'cover', 
+                backgroundPosition: 'center' 
+              }}
+            >
+              {/* Overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              
+              <div className="relative z-10 text-white">
+                <CardTitle className="text-2xl font-bold mb-2">{tale.title}</CardTitle>
+                <p className="text-sm line-clamp-2">{tale.description}</p>
+              </div>
+            </Card>
+          </Link>
         ))}
       </div>
     </div>
