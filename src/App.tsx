@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { SidebarNav } from "@/components/SidebarNav";
-import { MobileSidebar } from "@/components/MobileSidebar"; // Updated import path
+import { MobileSidebar } from "@/components/MobileSidebar";
 import { useIsMobile } from "./hooks/use-mobile";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import TableOfContents from "./pages/TableOfContents";
@@ -20,13 +20,13 @@ import React from "react";
 
 const queryClient = new QueryClient();
 
-// ProtectedRoute component
+// ProtectedRoute component - TEMPORARILY DISABLED FOR DEVELOPMENT
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { session } = useSession();
-  if (!session) {
-    return <Navigate to="/login" replace />;
-  }
-  return <>{children}</>;
+  // const { session } = useSession(); // Commented out for temporary bypass
+  // if (!session) {
+  //   return <Navigate to="/login" replace />;
+  // }
+  return <>{children}</>; // Always render children for development
 };
 
 const AppContent = () => {
