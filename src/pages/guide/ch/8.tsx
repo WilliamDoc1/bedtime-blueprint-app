@@ -10,6 +10,7 @@ const Chapter8: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6 text-gold-500">{chapter.title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-gray-800">
         <div className="space-y-4">
+          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary">Working with Nightmares</h2>
           {chapter.content}
           <p>Nightmares can be distressing, but they often carry important messages from our subconscious. Instead of avoiding them, learning to work with nightmares can be a powerful path to healing and understanding. Start by recording the nightmare in detail, focusing on emotions and specific imagery.</p>
         </div>

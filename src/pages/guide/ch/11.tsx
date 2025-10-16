@@ -10,6 +10,7 @@ const Chapter11: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6 text-gold-500">{chapter.title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-gray-800">
         <div className="space-y-4">
+          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary">Maintaining Your Dream Practice</h2>
           {chapter.content}
           <p>Maintaining a consistent dream practice is key to unlocking its full potential. Life can get busy, but even a few minutes each morning dedicated to dream recall and journaling can make a significant difference. Don't get discouraged by periods of low recall; it's a natural part of the process.</p>
         </div>

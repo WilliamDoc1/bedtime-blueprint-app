@@ -10,6 +10,7 @@ const Chapter1: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6 text-gold-500">{chapter.title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-gray-800">
         <div className="space-y-4">
+          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary">Introduction to Dream Journaling</h2>
           {chapter.content}
           <p>Dream journaling is a powerful tool for self-discovery. By regularly recording your dreams, you can uncover hidden insights, process emotions, and tap into your subconscious creativity. It's a journey that begins with a simple commitment to remember and record.</p>
         </div>
