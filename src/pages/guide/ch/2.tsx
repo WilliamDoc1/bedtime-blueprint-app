@@ -1,10 +1,8 @@
 "use client";
 
 import React from "react";
-import { chapterDetails } from "@/utils/guideContent";
 
 const Chapter2: React.FC = () => {
-  const chapter = chapterDetails[1];
   return (
     <div className="container mx-auto p-4 bg-lavender-50 rounded-lg shadow-md">
       <h1 className="text-4xl font-bold mb-6 text-gold-500">{chapter.title}</h1>

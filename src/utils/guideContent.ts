@@ -1,15 +1,57 @@
-import React from "react";
-
 export const chapterDetails = [
-  { number: 1, title: "Introduction to Dream Journaling", content: <p>Discover the benefits of keeping a dream journal and how it can enhance your self-awareness. Learn how to start your journey into the fascinating world of dreams, understanding their significance and impact on your waking life. This chapter covers the basics of setting up your journal and committing to a regular practice.</p> },
-  { number: 2, title: "Setting Up Your Dream Space", content: <p>Learn how to create an environment conducive to dream recall and peaceful sleep. This includes tips on bedroom arrangement, lighting, sound, and pre-sleep routines that can significantly improve your ability to remember dreams. A calm and organized space is key to a rich dream life.</p> },
-  { number: 3, title: "Techniques for Dream Recall", content: <p>Explore various methods to improve your ability to remember your dreams vividly. From keeping a dream journal by your bedside to using specific affirmations before sleep, this chapter provides practical techniques to enhance your dream memory. Consistency and patience are highlighted as crucial elements.</p> },
-  { number: 4, title: "Understanding Dream Symbols", content: <p>Delve into common dream symbols and how to interpret their personal meaning for you. This chapter explains that symbols are highly personal and encourages you to develop your own dream dictionary. It provides examples of universal symbols and guides you on how to connect them to your unique experiences and emotions.</p> },
-  { number: 5, title: "Interpreting Your Nightly Narratives", content: <p>A step-by-step guide to analyzing your dreams and extracting valuable insights. Learn how to break down your dream narratives, identify key themes, and understand the messages your subconscious is trying to convey. This chapter emphasizes the importance of emotional responses within dreams.</p> },
-  { number: 6, title: "Lucid Dreaming Basics", content: <p>An introduction to lucid dreaming and simple techniques to get started. Discover how to become aware that you are dreaming while still in the dream state, and how to exert some control over your dream environment. Reality checks and dream signs are discussed as foundational practices.</p> },
-  { number: 7, title: "Dream Incubation Practices", content: <p>Learn how to set intentions for your dreams and seek answers or guidance. This chapter teaches you how to pose questions or focus on specific problems before sleep, inviting your dreams to provide insights or solutions. It's a powerful way to engage with your subconscious mind for problem-solving.</p> },
-  { number: 8, title: "Working with Nightmares", content: <p>Strategies for understanding and transforming recurring or frightening dreams. This chapter offers compassionate approaches to confronting and re-scripting nightmares, turning them into opportunities for growth and healing. Techniques for reducing anxiety related to nightmares are also covered.</p> },
-  { number: 9, title: "Dreams and Personal Growth", content: <p>How your dreams can be a powerful tool for self-discovery and emotional healing. Explore how consistent dream work can lead to greater self-awareness, help process emotions, and foster creativity. This chapter connects dream insights to real-life personal development.</p> },
-  { number: 10, title: "Advanced Dream Exploration", content: <p>Techniques for deeper dream work, including group sharing and creative expression. This chapter introduces more advanced methods for engaging with your dreams, such as active imagination, dream re-entry, and using art or writing to explore dream themes. It encourages a holistic approach to dream interpretation.</p> },
-  { number: 11, title: "Maintaining Your Dream Practice", content: <p>Tips for consistency and long-term engagement with your dream journaling journey. This final chapter provides advice on overcoming common challenges, staying motivated, and integrating dream insights into your daily life. It emphasizes that dream work is a lifelong practice of self-exploration.</p> },
+  {
+    number: 1,
+    title: "The Night You Have Been Dreaming Of",
+    content: "Every parent dreams of the moment when bedtime feels peaceful. Peaceful nights are not a mystery; they're the result of rhythm, safety, and connection. This guide will help you master these three ingredients.",
+  },
+  {
+    number: 2,
+    title: "Safety Standards and Risk-Aware Sleep Foundations",
+    content: "Before any method, before any plan, comes safety. Children can only surrender to sleep when their nervous system registers one thing: 'I am safe here'. Physical safety and emotional safety intertwine.",
+  },
+  {
+    number: 3,
+    title: "Sleep Audit and Readiness Assessment",
+    content: "Before changing anything, we measure. A sleep audit is like a compass: it shows where you are so you can travel without getting lost. When you understand your child's rhythms, triggers, and environment, you can stop guessing.",
+  },
+  {
+    number: 4,
+    title: "Environment and Bedtime Routine Design",
+    content: "Your child's bedroom is not just a room; it's a signal system. Every sight, sound, and scent either tells the brain 'stay alert' or 'it's safe to sleep'. Designing a sleep-friendly space is one of the fastest, most visible wins you can create.",
+  },
+  {
+    number: 5,
+    title: "Nap and Schedule Optimizer for 12-36 Months",
+    content: "Most bedtime struggles actually begin hours earlier, with naps. A tired child doesn't fall asleep faster; they fall apart. Naps regulate hormones, stabilize mood, and prevent cortisol spikes that sabotage nighttime sleep.",
+  },
+  {
+    number: 6,
+    title: "Bedtime Routines and Emotional Coaching",
+    content: "The last ten minutes of the day shape how your child feels about sleep. Children don't fall asleep because they're told to. They fall asleep because they feel safe enough to let go. Your tone, phrasing, and boundaries form the emotional bridge between wakefulness and rest.",
+  },
+  {
+    number: 7,
+    title: "Choose Your Method (3 Approaches)",
+    content: "Once your child's environment, timing, and emotional base are steady, you can begin gently guiding them toward independent sleep. This chapter is about choosing your approach—one that fits your child's temperament and your parenting values.",
+  },
+  {
+    number: 8,
+    title: "The 21-Day Plan: Week 1 — Reset and Connection",
+    content: "This week is about alignment, not speed. You're reintroducing predictability and trust. Think of Week 1 as foundation repair—the calmer the base, the easier the structure holds.",
+  },
+  {
+    number: 9,
+    title: "The 21-Day Plan: Week 2 — Gentle Fading and Consistency",
+    content: "Week 2 is where structure meets independence. You'll begin gradually reducing your physical involvement while maintaining emotional presence. This week isn't about 'doing less.' It's about trusting the groundwork you've already laid.",
+  },
+  {
+    number: 10,
+    title: "The 21-Day Plan: Week 3 — Consolidation and Troubleshooting",
+    content: "Week 3 is where everything you've practiced locks into rhythm. Your child's body clock, emotions, and environment are finally aligned. Now you'll fine-tune, troubleshoot, and protect your progress.",
+  },
+  {
+    number: 11,
+    title: "Long Term Maintenance, Regressions, Travel, Illness, and Transitions",
+    content: "Healthy sleep is a living system. Instead of aiming for 'perfect,' aim for flexible stability. A routine that bends but doesn't break. Long-term success isn't about control; it's about consistency over chaos.",
+  },
 ];
