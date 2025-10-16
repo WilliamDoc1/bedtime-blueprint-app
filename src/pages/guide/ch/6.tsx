@@ -10,7 +10,7 @@ const Chapter6: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6 text-gold-500">{chapter.title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-gray-800">
         <div className="space-y-4">
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary">Lucid Dreaming Basics</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">Lucid Dreaming Basics</h2>
           {chapter.content}
           <p>Lucid dreaming, the experience of knowing you are dreaming while in a dream, opens up incredible possibilities for exploration and self-discovery. The first step is to develop a habit of performing "reality checks" throughout your day.</p>
         </div>

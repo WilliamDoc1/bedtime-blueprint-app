@@ -14,7 +14,7 @@ const TableOfContents: React.FC = () => {
         {chapterDetails.map((chapter) => (
           <Card key={chapter.number} className="hover:shadow-lg transition-shadow duration-300 bg-white border-gold-400 border-2">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-sidebar-primary">Chapter {chapter.number}: {chapter.title}</CardTitle>
+              <CardTitle className="text-xl font-semibold text-gray-900">Chapter {chapter.number}: {chapter.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 mb-4 line-clamp-3">{chapter.content}</p>

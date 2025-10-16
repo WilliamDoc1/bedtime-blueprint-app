@@ -10,7 +10,7 @@ const Chapter9: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6 text-gold-500">{chapter.title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-gray-800">
         <div className="space-y-4">
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary">Dreams and Personal Growth</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">Dreams and Personal Growth</h2>
           {chapter.content}
           <p>Dreams are not just random firings of the brain; they are rich tapestries woven from our experiences, emotions, and aspirations. Engaging with your dreams can significantly contribute to your personal growth by offering unique perspectives on your challenges and strengths.</p>
         </div>

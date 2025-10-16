@@ -10,7 +10,7 @@ const Chapter7: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6 text-gold-500">{chapter.title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-gray-800">
         <div className="space-y-4">
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary">Dream Incubation Practices</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">Dream Incubation Practices</h2>
           {chapter.content}
           <p>Dream incubation is the practice of consciously setting an intention or asking a question before sleep, with the aim of receiving guidance or insight in your dreams. This technique can be used for problem-solving, creative inspiration, or emotional processing.</p>
         </div>

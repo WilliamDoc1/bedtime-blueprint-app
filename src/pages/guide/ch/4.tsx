@@ -10,7 +10,7 @@ const Chapter4: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6 text-gold-500">{chapter.title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-gray-800">
         <div className="space-y-4">
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary">Understanding Dream Symbols</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">Understanding Dream Symbols</h2>
           {chapter.content}
           <p>Dream symbols are the language of the subconscious. While some symbols have universal associations, their true meaning is deeply personal. A house in a dream, for instance, might represent your self, but its specific appearance (old, new, messy, clean) will hold unique significance for you.</p>
         </div>
