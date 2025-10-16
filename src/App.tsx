@@ -16,7 +16,7 @@ import MoonlightStories from "./pages/MoonlightStories";
 import Login from "./pages/Login";
 import { SessionContextProvider, useSession } from "./components/SessionContextProvider";
 import React from "react";
-import { chapterDetails } from "@/utils/guideContent"; // Import chapter details
+
 
 // Import individual chapter components
 import Chapter1 from "./pages/guide/ch/1";
