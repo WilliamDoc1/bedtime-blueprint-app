@@ -57,12 +57,12 @@ const Chapter7 = () => {
         {/* Column 2 */}
         <div>
           <h4 className="font-semibold text-md mt-4 mb-2">What You Say:</h4>
-          <p className="text-sm mb-4">"It's sleep time. I love you. I'll check again soon." The key is **tone**—steady, predictable, never frustrated.</p>
+          <p className="text-sm mb-4">"It's sleep time. I love you. I'll check again soon." The key is tone—steady, predictable, never frustrated.</p>
           
           {/* COMMON MISTAKE - Gold Box Style (Simulated) */}
           <div className="bg-soft-blush p-4 rounded-lg my-4 border border-gold-accent">
             <h4 className="font-semibold text-sm mb-1">Common Mistake:</h4>
-            <p className="text-sm">Extending visits too long. Comfort comes from **predictability**, not prolonged presence.</p>
+            <p className="text-sm">Extending visits too long. Comfort comes from predictability, not prolonged presence.</p>
           </div>
 
           <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">3. THE CHAIR METHOD</h2>

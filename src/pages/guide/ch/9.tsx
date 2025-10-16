@@ -40,7 +40,7 @@ const Chapter9 = () => {
                 <th className="px-3 py-2 text-left font-medium text-gray-700">Night</th>
                 <th className="px-3 py-2 text-left font-medium text-gray-700">Starting Point</th>
                 <th className="px-3 py-2 text-left font-medium text-gray-700">Adjustment</th>
-                <th className-="px-3 py-2 text-left font-medium text-gray-700">Reaction</th>
+                <th className="px-3 py-2 text-left font-medium text-gray-700">Reaction</th>
                 <th className="px-3 py-2 text-left font-medium text-gray-700">Outcome</th>
               </tr>
             </thead>
@@ -104,7 +104,7 @@ const Chapter9 = () => {
           <p className="mb-2">Use the printable log to track Method Used, Time Asleep, Night Wakings, and Parent Calm (1-5).</p>
 
           <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">5. END OF WEEK CHECK-IN</h2>
-          <p className="mb-2">At the end of Week 2, you'll start to see independent sleep windows forming. That's the signal you're ready for **Week 3 — Consolidation & Troubleshooting**.</p>
+          <p className="mb-2">At the end of Week 2, you'll start to see independent sleep windows forming. That's the signal you're ready for Week 3 — Consolidation & Troubleshooting.</p>
           
           <p className="font-semibold text-sm mt-4 uppercase">Reflection Prompt:</p>
           <p className="text-sm">How did your calm affect your child's pace of settling tonight?</p>

@@ -51,7 +51,7 @@ const Chapter10 = () => {
         {/* Column 2 */}
         <div>
           <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">3. HANDLING REGRESSIONS</h2>
-          <p className="mb-4">Even the best sleepers regress sometimes. It's normal and temporary. Teething, travel, developmental leaps, illness, or emotional stress can all ripple through your child's sleep rhythm. Think of it not as a setback, but as your system being **tested for strength.**</p>
+          <p className="mb-4">Even the best sleepers regress sometimes. It's normal and temporary. Teething, travel, developmental leaps, illness, or emotional stress can all ripple through your child's sleep rhythm. Think of it not as a setback, but as your system being tested for strength.</p>
           
           <h4 className="font-semibold text-md mt-4 mb-2">When it Happens:</h4>
           <ol className="list-decimal list-inside space-y-1 ml-4 text-sm mb-4">

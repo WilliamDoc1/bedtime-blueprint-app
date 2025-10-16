@@ -98,7 +98,7 @@ const Chapter11 = () => {
           <p className="text-sm">What part of your routine anchors your child most? Protect that above all else.</p>
           
           <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">6. LOOKING AHEAD</h2>
-          <p className="mb-4">Every season of sleep requires small tweaks, but the principles stay the same: Safety, Connection, Consistency. That's the **DreamDocs triangle** for peaceful nights.</p>
+          <p className="mb-4">Every season of sleep requires small tweaks, but the principles stay the same: Safety, Connection, Consistency. That's the DreamDocs triangle for peaceful nights.</p>
 
           <p className="font-semibold text-sm mt-4 uppercase text-center text-sidebar-primary-foreground">PROGRESS CUE</p>
           <p className="text-sm text-center">YOU NO LONGER CHASE SLEEP. YOU GUIDE IT.</p>

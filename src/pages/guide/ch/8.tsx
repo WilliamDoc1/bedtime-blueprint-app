@@ -10,7 +10,7 @@ const Chapter8 = () => {
         {/* Column 1 */}
         <div>
           <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">WELCOME TO THE RESET PHASE</h2>
-          <p className="mb-4">This week is about **alignment**, not speed. You're reintroducing predictability and trust. Think of Week 1 as foundation repair—the calmer the base, the easier the structure holds.</p>
+          <p className="mb-4">This week is about alignment, not speed. You're reintroducing predictability and trust. Think of Week 1 as foundation repair—the calmer the base, the easier the structure holds.</p>
           
           {/* PARENT TIP - Lavender Box Style (Simulated) */}
           <div className="bg-lavender-mist p-4 rounded-lg my-4 border border-lavender-accent">
@@ -82,7 +82,7 @@ const Chapter8 = () => {
             <li>What felt harder?</li>
             <li>How did you feel during the process?</li>
           </ul>
-          <p className="text-sm mb-4">This small ritual shifts your mindset from *fixing* your child's sleep to *understanding* your shared rhythm. Over time, these reflections become a quiet record of growth.</p>
+          <p className="text-sm mb-4">This small ritual shifts your mindset from fixing your child's sleep to understanding your shared rhythm. Over time, these reflections become a quiet record of growth.</p>
           
           <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">4. 7-DAY PROGRESS TRACKER (WEEK 1)</h2>
           <p className="mb-2">Use the printable log to track Bedtime Start, Asleep By, Wake-ups, and Notes. Tracking patterns reveals progress.</p>
@@ -100,7 +100,7 @@ const Chapter8 = () => {
             <li>Did your tone stay consistent?</li>
             <li>Did your child anticipate sleep cues earlier?</li>
           </ul>
-          <p className="text-sm">If "yes" to even one, you're ready to move into **Week 2 — Gentle Fading & Consistency**.</p>
+          <p className="text-sm">If "yes" to even one, you're ready to move into Week 2 — Gentle Fading & Consistency.</p>
           
           <p className="font-semibold text-sm mt-4 uppercase text-center text-sidebar-primary-foreground">PROGRESS CUE</p>
           <p className="text-sm text-center">Your calm is now the strongest part of the bedtime equation.</p>

@@ -65,10 +65,10 @@ const Chapter6 = () => {
           <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">3. SCRIPTS FOR COMMON SCENARIOS</h2>
           <p className="mb-2">These are ready-to-use bedtime scripts designed to keep nights calm and predictable.</p>
           <ul className="list-disc list-inside space-y-2 ml-4 text-sm mb-4">
-            <li>**"One More Story" Requests:** "We already read our two stories, sweetheart. You can choose the first story for tomorrow."</li>
-            <li>**Fear of the Dark:** "The moonlight is our friend. The stars are tiny nightlights. You're safe, and I'm nearby."</li>
-            <li>**Separation Anxiety:** "You're safe in your bed, and I'll check on you in a few minutes. You can rest while I tidy up."</li>
-            <li>**Boundary Testing:** "It's okay to feel upset. My job is to help you rest. The rule stays the same, even when it's hard.”</li>
+            <li>"One More Story" Requests: "We already read our two stories, sweetheart. You can choose the first story for tomorrow."</li>
+            <li>Fear of the Dark: "The moonlight is our friend. The stars are tiny nightlights. You're safe, and I'm nearby."</li>
+            <li>Separation Anxiety: "You're safe in your bed, and I'll check on you in a few minutes. You can rest while I tidy up."</li>
+            <li>Boundary Testing: "It's okay to feel upset. My job is to help you rest. The rule stays the same, even when it's hard.”</li>
           </ul>
 
           {/* TRY THIS TONIGHT - Gold Box Style (Simulated) */}
@@ -82,9 +82,9 @@ const Chapter6 = () => {
 
           <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">5. EMOTIONAL CONNECTION RITUALS</h2>
           <ul className="list-disc list-inside space-y-2 ml-4 text-sm mb-4">
-            <li>**"Thank you" moments**—list one thing you each loved about the day.</li>
-            <li>**Gentle touch**—a hand on the back or cheek for 10 seconds lowers heart rate and builds trust.</li>
-            <li>**Lullaby or quiet hum**—the rhythmic sound regulates breathing for both parent and child.</li>
+            <li>"Thank you" moments—list one thing you each loved about the day.</li>
+            <li>Gentle touch—a hand on the back or cheek for 10 seconds lowers heart rate and builds trust.</li>
+            <li>Lullaby or quiet hum—the rhythmic sound regulates breathing for both parent and child.</li>
           </ul>
           
           {/* SLEEP SCIENCE SIMPLIFIED - Lavender Box Style (Simulated) */}

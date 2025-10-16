@@ -79,7 +79,7 @@ const Chapter5 = () => {
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Begin between 12:00-1:00 PM.</li>
             <li>Cap at 1.5-2 hours to protect bedtime.</li>
-            <li>Keep consistent within $\pm 15$ minutes daily.</li>
+            <li>Keep consistent within ±15 minutes daily.</li>
           </ul>
           
           {/* TRY THIS TONIGHT - Gold Box Style (Simulated) */}
