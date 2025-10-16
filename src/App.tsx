@@ -42,6 +42,7 @@ import SleepLog from "./pages/SleepLog";
 import SelfCareTracker from "./pages/SelfCareTracker";
 import ReflectionJournal from "./pages/ReflectionJournal";
 import RoutineBuilder from "./pages/RoutineBuilder";
+import Tracker from "./pages/Tracker"; // Import the new Tracker component
 
 
 const queryClient = new QueryClient();
@@ -108,10 +109,11 @@ const AppRoutes: React.FC = () => (
     <Route path="/guide/ch/9" element={<Chapter9 />} />
     <Route path="/guide/ch/10" element={<Chapter10 />} />
     <Route path="/guide/ch/11" element={<Chapter11 />} />
-    <Route path="/log" element={<SleepLog />} /> {/* Updated route and component */}
-    <Route path="/self-care-tracker" element={<SelfCareTracker />} /> {/* New route */}
-    <Route path="/journal-prompts" element={<ReflectionJournal />} /> {/* Updated route and component */}
-    <Route path="/routine-builder" element={<RoutineBuilder />} /> {/* New route */}
+    <Route path="/log" element={<SleepLog />} />
+    <Route path="/tracker" element={<Tracker />} /> {/* New route for the form */}
+    <Route path="/self-care-tracker" element={<SelfCareTracker />} />
+    <Route path="/journal-prompts" element={<ReflectionJournal />} />
+    <Route path="/routine-builder" element={<RoutineBuilder />} />
     <Route path="/templates" element={<Templates />} />
     <Route path="/tales/toc" element={<MoonlightStories />} />
     <Route path="/tales/luna" element={<Luna />} />

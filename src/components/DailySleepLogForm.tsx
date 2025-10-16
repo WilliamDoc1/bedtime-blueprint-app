@@ -30,8 +30,9 @@ const formSchema = z.object({
   date: z.date({
     required_error: "A date is required.",
   }),
-  nap_start: z.string().regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, "Invalid time format (HH:MM)"),
+  nap_start: z.string().regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, "Invalid time format (HH:MM)").optional().or(z.literal("")),
   bedtime_start: z.string().regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, "Invalid time format (HH:MM)"),
+  night_wakings: z.number().min(0, "Cannot be negative").max(10, "Too many wakings").default(0),
   calm_rating: z.array(z.number().min(1).max(5)).min(1).max(1),
   parent_notes: z.string().optional(),
 });
@@ -42,8 +43,9 @@ const DailySleepLogForm: React.FC = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       date: new Date(),
-      nap_start: "13:00",
+      nap_start: "",
       bedtime_start: "20:00",
+      night_wakings: 0,
       calm_rating: [3],
       parent_notes: "",
     },
@@ -60,8 +62,9 @@ const DailySleepLogForm: React.FC = () => {
       .insert({
         user_id: session.user.id,
         date: format(values.date, "yyyy-MM-dd"),
-        nap_start: values.nap_start,
+        nap_start: values.nap_start || null, // Store as null if empty
         bedtime_start: values.bedtime_start,
+        night_wakings: values.night_wakings,
         calm_rating: values.calm_rating[0],
         parent_notes: values.parent_notes,
       });
@@ -71,7 +74,14 @@ const DailySleepLogForm: React.FC = () => {
       showError("Failed to save sleep log: " + error.message);
     } else {
       showSuccess("Sleep log saved successfully!");
-      form.reset(); // Reset form after successful submission
+      form.reset({
+        date: new Date(),
+        nap_start: "",
+        bedtime_start: "20:00",
+        night_wakings: 0,
+        calm_rating: [3],
+        parent_notes: "",
+      }); // Reset form after successful submission
     }
   }
 
@@ -125,7 +135,7 @@ const DailySleepLogForm: React.FC = () => {
           name="nap_start"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nap Start (HH:MM)</FormLabel>
+              <FormLabel>Nap Start (HH:MM, optional)</FormLabel>
               <FormControl>
                 <Input type="time" {...field} className="w-[240px]" />
               </FormControl>
@@ -142,6 +152,27 @@ const DailySleepLogForm: React.FC = () => {
               <FormLabel>Bedtime Start (HH:MM)</FormLabel>
               <FormControl>
                 <Input type="time" {...field} className="w-[240px]" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="night_wakings"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Night Wakings</FormLabel>
+              <FormControl>
+                <Input
+                  type="number"
+                  {...field}
+                  onChange={(e) => field.onChange(parseInt(e.target.value))}
+                  className="w-[240px]"
+                  min={0}
+                  max={10}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
