@@ -4,7 +4,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, BookText, LayoutDashboard, Palette, Sparkles, ScrollText } from "lucide-react"; // Added ScrollText icon
+import { Menu, BookText, LayoutDashboard, Palette, Sparkles, ScrollText, ListChecks } from "lucide-react"; // Added ListChecks icon
 import { cn } from "@/lib/utils";
 
 export const MobileSidebar: React.FC = () => {
@@ -33,9 +33,14 @@ export const MobileSidebar: React.FC = () => {
       icon: <Sparkles className="mr-2 h-4 w-4" />,
     },
     {
-      title: "Bedtime Scripts", // New navigation item
+      title: "Bedtime Scripts",
       href: "/scripts",
-      icon: <ScrollText className="mr-2 h-4 w-4" />, // Icon for scripts
+      icon: <ScrollText className="mr-2 h-4 w-4" />,
+    },
+    {
+      title: "Checklist", // New navigation item
+      href: "/checklist",
+      icon: <ListChecks className="mr-2 h-4 w-4" />, // Icon for checklist
     },
   ];
 

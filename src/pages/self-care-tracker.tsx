@@ -4,7 +4,7 @@ const SelfCareTracker = () => {
   return (
     <div className="content-wrapper p-6 md:p-8 max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold text-center mb-6 text-sidebar-primary-foreground">Parent Self-Care Tracker</h1>
-      [cite_start]<p className="text-center text-gray-600 mb-8">You can't pour from an empty cup. Track small daily moments of restoration. [cite: 861]</p>
+      <p className="text-center text-gray-600 mb-8">You can't pour from an empty cup. Track small daily moments of restoration.</p>
 
       <table className="min-w-full divide-y divide-gray-300 border border-gray-200 text-sm mb-4">
         <thead className="bg-gray-50">
@@ -27,10 +27,9 @@ const SelfCareTracker = () => {
         </tbody>
       </table>
       
-      [cite_start]<p className="mt-8 text-sm text-center text-gray-500">Reminder: Your calm is the cue your child learns from most. [cite: 861]</p>
+      <p className="mt-8 text-sm text-center text-gray-500">Reminder: Your calm is the cue your child learns from most.</p>
     </div>
   );
 };
 
 export default SelfCareTracker;
-

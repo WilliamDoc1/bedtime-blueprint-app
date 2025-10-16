@@ -44,6 +44,7 @@ import ReflectionJournal from "./pages/ReflectionJournal";
 import RoutineBuilder from "./pages/RoutineBuilder";
 import Tracker from "./pages/Tracker"; // Import the new Tracker component
 import BedtimeScripts from "./pages/scripts"; // Import the new BedtimeScripts component
+import EnvironmentChecklist from "./pages/checklist"; // Import the new Checklist component
 
 
 const queryClient = new QueryClient();
@@ -122,7 +123,8 @@ const AppRoutes: React.FC = () => (
     <Route path="/tales/lantern-tree" element={<LanternTree />} />
     <Route path="/tales/cloud-painter" element={<CloudPainter />} />
     <Route path="/tales/willow" element={<Willow />} />
-    <Route path="/scripts" element={<BedtimeScripts />} /> {/* New route for Bedtime Scripts */}
+    <Route path="/scripts" element={<BedtimeScripts />} />
+    <Route path="/checklist" element={<EnvironmentChecklist />} /> {/* New route for Checklist */}
     <Route path="/my-dreams" element={<div>My Dreams Page</div>} />
     <Route path="/settings" element={<div>Settings Page</div>} />
     <Route path="/logout" element={<div>Logging out...</div>} />

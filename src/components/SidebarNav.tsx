@@ -4,7 +4,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { BookText, LayoutDashboard, Palette, Sparkles, ScrollText } from "lucide-react"; // Added ScrollText icon
+import { BookText, LayoutDashboard, Palette, Sparkles, ScrollText, ListChecks } from "lucide-react"; // Added ListChecks icon
 
 export const SidebarNav: React.FC = () => {
   const location = useLocation();
@@ -31,9 +31,14 @@ export const SidebarNav: React.FC = () => {
       icon: <Sparkles className="mr-2 h-4 w-4" />,
     },
     {
-      title: "Bedtime Scripts", // New navigation item
+      title: "Bedtime Scripts",
       href: "/scripts",
-      icon: <ScrollText className="mr-2 h-4 w-4" />, // Icon for scripts
+      icon: <ScrollText className="mr-2 h-4 w-4" />,
+    },
+    {
+      title: "Checklist", // New navigation item
+      href: "/checklist",
+      icon: <ListChecks className="mr-2 h-4 w-4" />, // Icon for checklist
     },
   ];
 
