@@ -13,10 +13,23 @@ import TableOfContents from "./pages/TableOfContents";
 import Tracker from "./pages/Tracker";
 import Templates from "./pages/Templates";
 import MoonlightStories from "./pages/MoonlightStories";
-import GuideChapter from "./pages/GuideChapter";
 import Login from "./pages/Login";
 import { SessionContextProvider, useSession } from "./components/SessionContextProvider";
 import React from "react";
+import { chapterDetails } from "@/utils/guideContent"; // Import chapter details
+
+// Import individual chapter components
+import Chapter1 from "./pages/guide/ch/1";
+import Chapter2 from "./pages/guide/ch/2";
+import Chapter3 from "./pages/guide/ch/3";
+import Chapter4 from "./pages/guide/ch/4";
+import Chapter5 from "./pages/guide/ch/5";
+import Chapter6 from "./pages/guide/ch/6";
+import Chapter7 from "./pages/guide/ch/7";
+import Chapter8 from "./pages/guide/ch/8";
+import Chapter9 from "./pages/guide/ch/9";
+import Chapter10 from "./pages/guide/ch/10";
+import Chapter11 from "./pages/guide/ch/11";
 
 const queryClient = new QueryClient();
 
@@ -31,20 +44,6 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) =
 
 const AppContent = () => {
   const isMobile = useIsMobile();
-
-  const chapterDetails = [
-    { number: 1, title: "Introduction to Dream Journaling", content: <p>Discover the benefits of keeping a dream journal and how it can enhance your self-awareness.</p> },
-    { number: 2, title: "Setting Up Your Dream Space", content: <p>Learn how to create an environment conducive to dream recall and peaceful sleep.</p> },
-    { number: 3, title: "Techniques for Dream Recall", content: <p>Explore various methods to improve your ability to remember your dreams vividly.</p> },
-    { number: 4, title: "Understanding Dream Symbols", content: <p>Delve into common dream symbols and how to interpret their personal meaning for you.</p> },
-    { number: 5, title: "Interpreting Your Nightly Narratives", content: <p>A step-by-step guide to analyzing your dreams and extracting valuable insights.</p> },
-    { number: 6, title: "Lucid Dreaming Basics", content: <p>An introduction to lucid dreaming and simple techniques to get started.</p> },
-    { number: 7, title: "Dream Incubation Practices", content: <p>Learn how to set intentions for your dreams and seek answers or guidance.</p> },
-    { number: 8, title: "Working with Nightmares", content: <p>Strategies for understanding and transforming recurring or frightening dreams.</p> },
-    { number: 9, title: "Dreams and Personal Growth", content: <p>How your dreams can be a powerful tool for self-discovery and emotional healing.</p> },
-    { number: 10, title: "Advanced Dream Exploration", content: <p>Techniques for deeper dream work, including group sharing and creative expression.</p> },
-    { number: 11, title: "Maintaining Your Dream Practice", content: <p>Tips for consistency and long-term engagement with your dream journaling journey.</p> },
-  ];
 
   return (
     <div className="flex min-h-screen">
@@ -71,7 +70,7 @@ const AppContent = () => {
         <main className="flex-1 overflow-y-auto p-4 md:p-8">
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="*" element={<ProtectedRoute><AppRoutes chapterDetails={chapterDetails} /></ProtectedRoute>} />
+            <Route path="*" element={<ProtectedRoute><AppRoutes /></ProtectedRoute>} />
           </Routes>
         </main>
         <MadeWithDyad />
@@ -81,23 +80,21 @@ const AppContent = () => {
 };
 
 // Separate component for application routes to be used inside ProtectedRoute
-const AppRoutes: React.FC<{ chapterDetails: typeof chapterDetails }> = ({ chapterDetails }) => (
+const AppRoutes: React.FC = () => (
   <Routes>
     <Route path="/" element={<Index />} />
     <Route path="/guide/toc" element={<TableOfContents />} />
-    {chapterDetails.map((chapter) => (
-      <Route
-        key={chapter.number}
-        path={`/guide/ch/${chapter.number}`}
-        element={
-          <GuideChapter
-            chapterNumber={chapter.number}
-            title={chapter.title}
-            content={chapter.content}
-          />
-        }
-      />
-    ))}
+    <Route path="/guide/ch/1" element={<Chapter1 />} />
+    <Route path="/guide/ch/2" element={<Chapter2 />} />
+    <Route path="/guide/ch/3" element={<Chapter3 />} />
+    <Route path="/guide/ch/4" element={<Chapter4 />} />
+    <Route path="/guide/ch/5" element={<Chapter5 />} />
+    <Route path="/guide/ch/6" element={<Chapter6 />} />
+    <Route path="/guide/ch/7" element={<Chapter7 />} />
+    <Route path="/guide/ch/8" element={<Chapter8 />} />
+    <Route path="/guide/ch/9" element={<Chapter9 />} />
+    <Route path="/guide/ch/10" element={<Chapter10 />} />
+    <Route path="/guide/ch/11" element={<Chapter11 />} />
     <Route path="/tracker" element={<Tracker />} />
     <Route path="/templates" element={<Templates />} />
     <Route path="/tales/toc" element={<MoonlightStories />} />

@@ -62,6 +62,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        lavender: {
+          50: '#F8F8FF', // Ghost White, very light lavender
+          100: '#E6E6FA', // Lavender (Blush)
+          200: '#D8BFD8', // Thistle
+          300: '#C8A2C8', // Lilac
+          400: '#B57EDC', // Lavender (Web)
+          500: '#9370DB', // Medium Purple
+        },
+        gold: {
+          50: '#FFFACD', // Lemon Chiffon, very light gold
+          100: '#FFF8DC', // Cornsilk
+          200: '#FFEFD5', // Papaya Whip
+          300: '#FFE4B5', // Moccasin
+          400: '#FFD700', // Gold
+          500: '#DAA520', // Goldenrod
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
