@@ -31,6 +31,14 @@ import Chapter9 from "./pages/guide/ch/9";
 import Chapter10 from "./pages/guide/ch/10";
 import Chapter11 from "./pages/guide/ch/11";
 
+// Import individual tale components
+import Luna from "./pages/tales/Luna";
+import Milo from "./pages/tales/Milo";
+import LanternTree from "./pages/tales/LanternTree";
+import CloudPainter from "./pages/tales/CloudPainter";
+import Willow from "./pages/tales/Willow";
+
+
 const queryClient = new QueryClient();
 
 // ProtectedRoute component - TEMPORARILY DISABLED FOR DEVELOPMENT
@@ -98,6 +106,11 @@ const AppRoutes: React.FC = () => (
     <Route path="/tracker" element={<Tracker />} />
     <Route path="/templates" element={<Templates />} />
     <Route path="/tales/toc" element={<MoonlightStories />} />
+    <Route path="/tales/luna" element={<Luna />} />
+    <Route path="/tales/milo" element={<Milo />} />
+    <Route path="/tales/lantern-tree" element={<LanternTree />} />
+    <Route path="/tales/cloud-painter" element={<CloudPainter />} />
+    <Route path="/tales/willow" element={<Willow />} />
     <Route path="/my-dreams" element={<div>My Dreams Page</div>} />
     <Route path="/settings" element={<div>Settings Page</div>} />
     <Route path="/logout" element={<div>Logging out...</div>} />
