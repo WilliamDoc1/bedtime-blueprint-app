@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { printableToolkitTemplates } from "@/utils/templateContent";
-import { Download, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PrintableToolkit: React.FC = () => {
   return (
@@ -16,18 +17,11 @@ const PrintableToolkit: React.FC = () => {
             <CardDescription className="text-gray-700">{template.description}</CardDescription>
           </CardHeader>
           <CardContent>
-            {template.type === "download" && (
-              <Button asChild className="w-full bg-lavender-500 hover:bg-lavender-400 text-white">
-                <a href={template.pdfLink} download>
-                  <Download className="mr-2 h-4 w-4" /> Download PDF
-                </a>
-              </Button>
-            )}
-            {template.type === "link" && template.externalLink && (
+            {template.type === "internal-link" && template.internalLink && (
               <Button asChild variant="outline" className="w-full border-lavender-500 text-lavender-500 hover:bg-lavender-50 hover:text-lavender-600">
-                <a href={template.externalLink} target="_blank" rel="noopener noreferrer">
+                <Link to={template.internalLink}>
                   {template.linkText || "View Template"} <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
+                </Link>
               </Button>
             )}
           </CardContent>

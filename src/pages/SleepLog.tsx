@@ -3,7 +3,7 @@
 import React from "react";
 import DailySleepLogForm from "@/components/DailySleepLogForm";
 
-const Tracker: React.FC = () => {
+const SleepLog: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Dream Tracker</h1>
@@ -15,4 +15,4 @@ const Tracker: React.FC = () => {
   );
 };
 
-export default Tracker;
+export default SleepLog;
