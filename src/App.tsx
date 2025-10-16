@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import { SidebarNav } from "./components/SidebarNav";
-import { MobileSidebar } from "./components/MobileSidebar";
+import { SidebarNav } from "@/components/SidebarNav";
+import { MobileSidebar } from "@/components/MobileSidebar"; // Updated import path
 import { useIsMobile } from "./hooks/use-mobile";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import TableOfContents from "./pages/TableOfContents";
