@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Play, Pause } from "lucide-react";
 import { cn } from "@/lib/utils";
+import StoryPageLayout from "./StoryPageLayout"; // Import the new layout component
 
 interface StoryPage {
   image: string;
@@ -118,57 +119,15 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
           <div className="embla__container flex">
             {pages.map((page, index) => (
               <div className="embla__slide flex-[0_0_100%] min-w-0" key={index}>
-                {/* Single Column Layout: Image on top, Text below */}
-                <div className="flex flex-col h-full min-h-[600px] bg-white">
-                  
-                  {/* Image Area (approx 60% height) */}
-                  <div className="relative overflow-hidden flex-grow max-h-[60%]">
-                    <img
-                      src={page.image}
-                      alt={`Story page ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  {/* Text Area (approx 40% height, scrollable if needed) */}
-                  <div className="p-6 md:p-10 flex flex-col justify-between relative flex-shrink-0 h-[40%] overflow-y-auto">
-                    <div className="text-lg leading-relaxed text-gray-800 font-serif">
-                      {page.text.split('\n').map((paragraph, i) => {
-                        // Apply drop cap only to the first paragraph of non-title/end pages
-                        if (i === 0 && paragraph.length > 0 && page.text !== "TITLE PAGE" && page.text !== "THE END") {
-                          const firstLetter = paragraph.charAt(0);
-                          const restOfText = paragraph.substring(1);
-                          return (
-                            <p key={i} className="mb-4">
-                              <span className="float-left text-6xl font-bold mr-2 text-lavender-500 leading-none">
-                                {firstLetter}
-                              </span>
-                              {restOfText}
-                            </p>
-                          );
-                        }
-                        return <p key={i} className="mb-4">{paragraph}</p>;
-                      })}
-                    </div>
-                    
-                    {/* Controls and Page Number */}
-                    <div className="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center flex-shrink-0">
-                      <div className="flex items-center space-x-3">
-                        <audio ref={audioRef} onEnded={handleAudioEnded} src={page.audio} className="hidden" />
-                        <Button
-                          onClick={isPlaying ? handleAudioPause : handleAudioPlay}
-                          variant="default"
-                          size="lg"
-                          className="bg-lavender-500 hover:bg-lavender-600 text-white text-base rounded-full px-6"
-                        >
-                          {isPlaying ? <Pause className="h-5 w-5 mr-2" /> : <Play className="h-5 w-5 mr-2" />}
-                          {isPlaying ? "Pause" : "Listen"}
-                        </Button>
-                      </div>
-                      <p className="text-sm text-gray-600">Page {index + 1} of {pages.length}</p>
-                    </div>
-                  </div>
-                </div>
+                <StoryPageLayout
+                  page={page}
+                  pageIndex={index}
+                  totalPages={pages.length}
+                  isPlaying={isPlaying}
+                  handleAudioPlay={handleAudioPlay}
+                  handleAudioPause={handleAudioPause}
+                  audioRef={audioRef}
+                />
               </div>
             ))}
           </div>
@@ -186,15 +145,15 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
           <ArrowLeft className="h-5 w-5" />
         </Button>
         
-        {/* Next Button */}
+        {/* Next Button (Styled to be prominent, matching the request for a fixed arrow) */}
         <Button
           onClick={scrollNext}
           disabled={!canScrollNext}
-          variant="outline"
+          variant="default"
           size="icon"
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-gold-400 hover:bg-gold-500 text-white z-20 shadow-lg h-12 w-12 rounded-full"
         >
-          <ArrowRight className="h-5 w-5" />
+          <ArrowRight className="h-6 w-6" />
         </Button>
       </div>
     </div>
