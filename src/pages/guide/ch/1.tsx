@@ -3,13 +3,13 @@ import React from 'react';
 const Chapter1 = () => {
   return (
     <div className="chapter-content-wrapper p-6 md:p-8">
-      <h1 className="text-3xl font-bold text-center mb-6">THE NIGHT YOU HAVE BEEN DREAMING OF</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">THE NIGHT YOU HAVE BEEN DREAMING OF</h1>
       
       <div className="grid md:grid-cols-2 gap-8">
         
         {/* Column 1 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">WELCOME TO CALM EVENINGS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">WELCOME TO CALM EVENINGS</h2>
           <p className="mb-4">Every parent dreams of the moment when bedtime feels peaceful. When tiny eyelids grow heavy, the home softens into quiet, and everyone finally exhales. If that still feels far away, you're not alone. Most families find bedtime to be the hardest hour of the day.</p>
           <p className="mb-4">The good news? Peaceful nights are not a mystery. They're the result of rhythm, safety, and connection. These are three ingredients that this guide will help you master.</p>
           
@@ -19,7 +19,7 @@ const Chapter1 = () => {
             <p className="text-sm">Lower the lights 45 minutes before bedtime. Light cues tell your child's body, "Sleep is coming".</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">A COMPASSIONATE PATH TO REST</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">A COMPASSIONATE PATH TO REST</h2>
           <p className="mb-4">Sleep is not a luxury. It is a pillar of your child's health and your family's wellbeing.</p>
           
           <h4 className="font-semibold text-md mt-4 mb-2">When nights improve:</h4>
@@ -46,7 +46,7 @@ const Chapter1 = () => {
           
           <p className="mb-4">This isn't about rigid schedules. It's about predictable patterns that allow everyone to rest. Predictability is the opposite of control. It gives your child freedom to relax because they already know what's next.</p>
           
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">WHY GENTLE WORKS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">WHY GENTLE WORKS</h2>
           <p className="mb-4">Children fall asleep when their nervous systems feel safe. Science confirms that the bedtime struggle isn't about "stubbornness"; it's about overstimulation. Gentle, connection-based approaches regulate the nervous system first, so cooperation follows naturally.</p>
 
           {/* HOW TO USE THIS BOOK - Lavender Box Style (Simulated) */}

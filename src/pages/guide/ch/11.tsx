@@ -3,13 +3,13 @@ import React from 'react';
 const Chapter11 = () => {
   return (
     <div className="chapter-content-wrapper p-6 md:p-8">
-      <h1 className="text-3xl font-bold text-center mb-6">LONG TERM MAINTENANCE, REGRESSIONS, TRAVEL, ILLNESS, AND TRANSITIONS</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">LONG TERM MAINTENANCE, REGRESSIONS, TRAVEL, ILLNESS, AND TRANSITIONS</h1>
 
       <div className="grid md:grid-cols-2 gap-8">
         
         {/* Column 1 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">1. MAINTENANCE MINDSET</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">1. MAINTENANCE MINDSET</h2>
           <p className="mb-4">Healthy sleep is a living system. Instead of aiming for "perfect," aim for flexible stability. A routine that bends but doesn't break.</p>
           
           {/* PARENT TIP - Lavender Box Style (Simulated) */}
@@ -18,7 +18,7 @@ const Chapter11 = () => {
             <p className="text-sm">Long-term success isn't about control; it's about consistency over chaos.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">2. SEASONAL AND DEVELOPMENTAL REGRESSIONS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">2. SEASONAL AND DEVELOPMENTAL REGRESSIONS</h2>
           <p className="mb-2">Expect them around:</p>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>12, 18, 24, and 30 months (developmental leaps)</li>
@@ -38,7 +38,7 @@ const Chapter11 = () => {
             <p className="text-sm">Keep your sleep phrase identical even on vacation. Familiar words restore predictability.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">3. TRAVEL ADAPTATION</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">3. TRAVEL ADAPTATION</h2>
           <table className="min-w-full divide-y divide-gray-300 border border-gray-200 text-sm mb-4">
             <thead className="bg-gray-50">
               <tr>
@@ -71,7 +71,7 @@ const Chapter11 = () => {
         
         {/* Column 2 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">4. ILLNESS & DISRUPTED NIGHTS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">4. ILLNESS & DISRUPTED NIGHTS</h2>
           <p className="mb-2">When sick, comfort first, structure second. You can't train through fever. You hold through it. Once better, slide back into your method within 48 hours.</p>
 
           {/* COMMON MISTAKE - Gold Box Style (Simulated) */}
@@ -80,7 +80,7 @@ const Chapter11 = () => {
             <p className="text-sm">Keeping new comfort habits too long after recovery. Reassure, then reset.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">5. TRANSITION TO TODDLER BED</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">5. TRANSITION TO TODDLER BED</h2>
           <h4 className="font-semibold text-md mt-4 mb-2">Signs it's time:</h4>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Climbing out consistently.</li>
@@ -97,10 +97,10 @@ const Chapter11 = () => {
           <p className="font-semibold text-sm mt-4 uppercase">Reflection Prompt:</p>
           <p className="text-sm">What part of your routine anchors your child most? Protect that above all else.</p>
           
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">6. LOOKING AHEAD</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">6. LOOKING AHEAD</h2>
           <p className="mb-4">Every season of sleep requires small tweaks, but the principles stay the same: Safety, Connection, Consistency. That's the DreamDocs triangle for peaceful nights.</p>
 
-          <p className="font-semibold text-sm mt-4 uppercase text-center text-sidebar-primary-foreground">PROGRESS CUE</p>
+          <p className="font-semibold text-sm mt-4 uppercase text-center text-gray-900">PROGRESS CUE</p>
           <p className="text-sm text-center">YOU NO LONGER CHASE SLEEP. YOU GUIDE IT.</p>
         </div>
       </div>

@@ -3,13 +3,13 @@ import React from 'react';
 const Chapter2 = () => {
   return (
     <div className="chapter-content-wrapper p-6 md:p-8">
-      <h1 className="text-3xl font-bold text-center mb-6">SAFETY STANDARDS AND RISK-AWARE SLEEP FOUNDATIONS</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">SAFETY STANDARDS AND RISK-AWARE SLEEP FOUNDATIONS</h1>
 
       <div className="grid md:grid-cols-2 gap-8">
         
         {/* Column 1 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">WHY SAFETY IS THE FIRST STEP TOWARD SLEEP</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">WHY SAFETY IS THE FIRST STEP TOWARD SLEEP</h2>
           <p className="mb-4">Before any method, before any plan, comes safety. Children can only surrender to sleep when their nervous system registers one thing: "I am safe here". Physical safety and emotional safety intertwine; the one reinforces the other. The more consistent and predictable your child's environment feels, the faster their body releases melatonin and allows rest.</p>
           
           {/* PARENT TIP - Lavender Box Style (Simulated) */}
@@ -18,7 +18,7 @@ const Chapter2 = () => {
             <p className="text-sm">Toddlers who feel secure during transitions fall asleep faster and wake less often. Safety is the quiet hero of sleep training.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">1. PHYSICAL SAFETY FOUNDATIONS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">1. PHYSICAL SAFETY FOUNDATIONS</h2>
           <ul className="list-disc list-inside space-y-2 ml-4 text-sm mb-4">
             <li>Crib or Bed Check: Confirm stable frame, firm mattress, and fitted sheet (no excess padding or toys). If your child has transitioned to a toddler bed, ensure low height and a clear floor zone.</li>
             <li>Temperature and Light: Ideal room temperature is between 20-22°C (68-72°F). Light should mimic dusk—dim amber light over bright white or blue.</li>
@@ -31,7 +31,7 @@ const Chapter2 = () => {
             <p className="text-sm">Overdecorating the sleep space. Extra visuals overstimulate; minimalism calms the sensory system.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">2. EMOTIONAL SAFETY FOUNDATIONS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">2. EMOTIONAL SAFETY FOUNDATIONS</h2>
           <p className="mb-2">Children rely on predictability. Every consistent bedtime action becomes a trust signal that says: You're okay. I'll guide you to rest.</p>
           <ul className="list-disc list-inside space-y-2 ml-4 text-sm mb-4">
             <li>Same Sequence Every Night: Bath → Pajamas → Lights Dimmed → Story → Sleep Cue (song or phrase).</li>
@@ -48,7 +48,7 @@ const Chapter2 = () => {
             <p className="text-sm">Use one gentle "sleep phrase" each night (e.g., "The moon is watching over you."). Familiar repetition builds trust faster than explanation.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">3. RISK-AWARE SLEEP PRACTICES</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">3. RISK-AWARE SLEEP PRACTICES</h2>
           <p className="mb-2">Safety isn't just about comfort. It's about prevention. As children grow, their needs shift. Here's how to stay proactive:</p>
 
           <table className="min-w-full divide-y divide-gray-300 border border-gray-200 text-sm mb-4">
@@ -84,7 +84,7 @@ const Chapter2 = () => {
             <p>Predictability lowers cortisol and norepinephrine levels, allowing melatonin to rise. Safety is biochemical, not just emotional.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">4. YOUR "SAFETY SNAPSHOT" CHECKLIST</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">4. YOUR "SAFETY SNAPSHOT" CHECKLIST</h2>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Crib/bed meets safety standards.</li>
             <li>Room lighting transitions from bright → warm glow → dim.</li>
@@ -97,7 +97,7 @@ const Chapter2 = () => {
           <p className="font-semibold text-sm mt-4 uppercase">Reflection Prompt:</p>
           <p className="text-sm">When your child feels truly safe, what changes in their body language or tone do you notice?</p>
 
-          <p className="font-semibold text-sm mt-4 uppercase text-center text-sidebar-primary-foreground">PROGRESS CUE</p>
+          <p className="font-semibold text-sm mt-4 uppercase text-center text-gray-900">PROGRESS CUE</p>
           <p className="text-sm text-center">Each step of safety becomes a layer in your sleep foundation. You've now built the base. Next, we measure where you are and where you need to go.</p>
         </div>
       </div>

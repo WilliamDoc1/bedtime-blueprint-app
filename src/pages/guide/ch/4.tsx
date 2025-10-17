@@ -3,12 +3,12 @@ import React from 'react';
 const Chapter4 = () => {
   return (
     <div className="chapter-content-wrapper p-6 md:p-8">
-      <h1 className="text-3xl font-bold text-center mb-6">ENVIRONMENT AND BEDTIME ROUTINE DESIGN</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">ENVIRONMENT AND BEDTIME ROUTINE DESIGN</h1>
       
       <div className="grid md:grid-cols-2 gap-8">
         {/* Column 1 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">WHY THE ENVIRONMENT MATTERS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">WHY THE ENVIRONMENT MATTERS</h2>
           <p className="mb-4">Your child's bedroom is not just a room; it's a signal system. Every sight, sound, and scent either tells the brain "stay alert" or "it's safe to sleep". Designing a sleep-friendly space is one of the fastest, most visible wins you can create.</p>
           
           {/* PARENT TIP - Lavender Box Style */}
@@ -17,7 +17,7 @@ const Chapter4 = () => {
             <p className="text-sm">Most families over-correct with décor. The goal isn't Pinterest-perfect; it's sensory calm.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">1. LIGHTING: TEACHING THE BRAIN TO WIND DOWN</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">1. LIGHTING: TEACHING THE BRAIN TO WIND DOWN</h2>
           <p className="mb-2">Light is the master cue for melatonin.</p>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
             <li>Day: open curtains, bright natural light.</li>
@@ -31,7 +31,7 @@ const Chapter4 = () => {
             <p className="text-sm">Replace overhead lighting with a warm lamp and notice how quickly voices drop in volume.</p>
           </div>
           
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">2. SOUND & SCENT</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">2. SOUND & SCENT</h2>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
             <li>Sound: Choose one continuous background tone: white-noise or soft rainfall. Avoid lullabies on loop; lyrics keep the mind alert.</li>
             <li>Scent: A mild lavender or vanilla diffuser can create a "sleep anchor". Keep it subtle and constant.</li>
@@ -47,7 +47,7 @@ const Chapter4 = () => {
 
         {/* Column 2 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">3. TEMPERATURE & TOUCH</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">3. TEMPERATURE & TOUCH</h2>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Ideal room temperature: 20-22°C (68-72°F).</li>
             <li>Avoid fleece pajamas if the child runs warm.</li>
@@ -55,7 +55,7 @@ const Chapter4 = () => {
             <li>A small weighted blanket (within safety limits) can enhance the sense of grounding.</li>
           </ul>
           
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">4. DESIGNING THE ROUTINE FLOW</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">4. DESIGNING THE ROUTINE FLOW</h2>
           <p className="mb-2">Think of the routine as choreography: Same order, gentle rhythm.</p>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Bath or warm wipe-down</li>
@@ -71,7 +71,7 @@ const Chapter4 = () => {
             <p className="text-sm">Adding activities to "tire them out." Stimulation ≠ fatigue; overstimulation delays sleep hormones.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">5. YOUR ROUTINE TEMPLATE</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">5. YOUR ROUTINE TEMPLATE</h2>
           <table className="min-w-full divide-y divide-gray-300 border border-gray-200 text-sm">
             <thead className="bg-gray-50">
               <tr>
@@ -110,7 +110,7 @@ const Chapter4 = () => {
             <p className="text-sm">How does your home feel at 7 PM? Hurried or peaceful? What one cue can you change tonight?</p>
           </div>
 
-          <p className="font-semibold text-sm mt-4 uppercase text-center text-sidebar-primary-foreground">PROGRESS CUE</p>
+          <p className="font-semibold text-sm mt-4 uppercase text-center text-gray-900">PROGRESS CUE</p>
           <p className="text-sm text-center">Once your environment and sequence are steady for three nights, your child's body clock begins to anticipate rest automatically. That's momentum.</p>
         </div>
       </div>

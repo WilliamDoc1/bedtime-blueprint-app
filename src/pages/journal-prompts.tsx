@@ -5,11 +5,11 @@ const BedtimeJournalPrompts = () => {
   return (
     <div className="container mx-auto p-4 bg-lavender-50 rounded-lg shadow-md">
       <div className="content-wrapper p-6 md:p-8 max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-6 text-sidebar-primary-foreground">Bedtime Reflection Journal Prompts</h1>
+        <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">Bedtime Reflection Journal Prompts</h1>
         <p className="text-center text-gray-600 mb-8">Reminder: This isn't about perfection. It's about awareness and progress.</p>
 
         <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 mb-8">
-          <h2 className="text-xl font-semibold mb-4 text-sidebar-primary-foreground">Nightly Reflection</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">Nightly Reflection</h2>
           <p className="text-sm mb-4">Focus on small wins and emotional regulation.</p>
           <ul className="list-disc list-inside space-y-2 ml-4 text-base">
             <li>What went smoother tonight?</li>
@@ -21,7 +21,7 @@ const BedtimeJournalPrompts = () => {
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-          <h2 className="text-xl font-semibold mb-4 text-sidebar-primary-foreground">End-of-Week Reflection</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">End-of-Week Reflection</h2>
           <p className="text-sm mb-4">Process your parenting journey and celebrate progress.</p>
           <ul className="list-disc list-inside space-y-2 ml-4 text-base">
             <li>What part of bedtime feels most peaceful—and what might be getting in the way of that calm?</li>

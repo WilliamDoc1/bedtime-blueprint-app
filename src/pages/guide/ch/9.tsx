@@ -3,13 +3,13 @@ import React from 'react';
 const Chapter9 = () => {
   return (
     <div className="chapter-content-wrapper p-6 md:p-8">
-      <h1 className="text-3xl font-bold text-center mb-6">THE 21-DAY PLAN: WEEK 2 — GENTLE FADING AND CONSISTENCY</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">THE 21-DAY PLAN: WEEK 2 — GENTLE FADING AND CONSISTENCY</h1>
 
       <div className="grid md:grid-cols-2 gap-8">
         
         {/* Column 1 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">WELCOME TO THE CONFIDENCE PHASE</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">WELCOME TO THE CONFIDENCE PHASE</h2>
           <p className="mb-4">Week 2 is where structure meets independence. You'll begin gradually reducing your physical involvement while maintaining emotional presence.</p>
           
           {/* PARENT TIP - Lavender Box Style (Simulated) */}
@@ -18,7 +18,7 @@ const Chapter9 = () => {
             <p className="text-sm">This week isn't about "doing less." It's about trusting the groundwork you've already laid.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">1. WEEK 2 GOALS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">1. WEEK 2 GOALS</h2>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Reduce physical proximity (begin fading/chair method).</li>
             <li>Maintain identical routine timing.</li>
@@ -31,7 +31,7 @@ const Chapter9 = () => {
             "I'm still here, and you can do this."
           </blockquote>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">2. IMPLEMENTING THE FADE</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">2. IMPLEMENTING THE FADE</h2>
           <p className="mb-2">Each night, move your chair or standing point slightly farther. If you used spaced reassurance, lengthen intervals by 1-2 minutes. Track each adjustment. Visual progress reinforces confidence.</p>
           
           <table className="min-w-full divide-y divide-gray-300 border border-gray-200 text-sm mb-4">
@@ -85,7 +85,7 @@ const Chapter9 = () => {
             <p className="text-sm">When your child calls out, pause 10 seconds before responding. Your pause teaches them to check their own calm first.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">3. HANDLING NIGHT WAKINGS</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">3. HANDLING NIGHT WAKINGS</h2>
           <p className="mb-2">Night wakings in Week 2 are normal. The brain is learning a new pattern. When it happens:</p>
           <ul className="list-decimal list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Wait a moment before responding.</li>
@@ -100,16 +100,16 @@ const Chapter9 = () => {
             <p className="text-sm">Adding new strategies midweek. Stick with one. Change confuses progress.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">4. 7-DAY CONSISTENCY LOG (WEEK 2)</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">4. 7-DAY CONSISTENCY LOG (WEEK 2)</h2>
           <p className="mb-2">Use the printable log to track Method Used, Time Asleep, Night Wakings, and Parent Calm (1-5).</p>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">5. END OF WEEK CHECK-IN</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">5. END OF WEEK CHECK-IN</h2>
           <p className="mb-2">At the end of Week 2, you'll start to see independent sleep windows forming. That's the signal you're ready for Week 3 — Consolidation & Troubleshooting.</p>
           
           <p className="font-semibold text-sm mt-4 uppercase">Reflection Prompt:</p>
           <p className="text-sm">How did your calm affect your child's pace of settling tonight?</p>
           
-          <p className="font-semibold text-sm mt-4 uppercase text-center text-sidebar-primary-foreground">PROGRESS CUE</p>
+          <p className="font-semibold text-sm mt-4 uppercase text-center text-gray-900">PROGRESS CUE</p>
           <p className="text-sm text-center">The shift from "they need me to fall asleep" to "they want me near but can fall asleep alone" means the plan is working.</p>
         </div>
       </div>

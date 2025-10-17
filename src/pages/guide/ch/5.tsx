@@ -3,13 +3,13 @@ import React from 'react';
 const Chapter5 = () => {
   return (
     <div className="chapter-content-wrapper p-6 md:p-8">
-      <h1 className="text-3xl font-bold text-center mb-6">NAP AND SCHEDULE OPTIMIZER FOR 12–36 MONTHS</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">NAP AND SCHEDULE OPTIMIZER FOR 12–36 MONTHS</h1>
 
       <div className="grid md:grid-cols-2 gap-8">
         
         {/* Column 1 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">WHY NAPS SHAPE THE ENTIRE NIGHT</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">WHY NAPS SHAPE THE ENTIRE NIGHT</h2>
           <p className="mb-4">Most bedtime struggles actually begin hours earlier, with naps. A tired child doesn't fall asleep faster; they fall apart. Naps regulate hormones, stabilize mood, and prevent cortisol spikes that sabotage nighttime sleep. When naps are balanced, bedtime becomes peaceful, predictable, and cooperative.</p>
           
           {/* PARENT TIP - Lavender Box Style (Simulated) */}
@@ -18,7 +18,7 @@ const Chapter5 = () => {
             <p className="text-sm">A missed nap is never "free sleep" later—it's borrowed calm you'll have to repay at bedtime.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">1. UNDERSTANDING SLEEP PRESSURE</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">1. UNDERSTANDING SLEEP PRESSURE</h2>
           <p className="mb-2">Sleep pressure is the natural buildup of tiredness that makes the body crave rest.</p>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Too little pressure = bedtime resistance.</li>
@@ -67,7 +67,7 @@ const Chapter5 = () => {
 
         {/* Column 2 */}
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">2. TIMING NAPS LIKE A PRO</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">2. TIMING NAPS LIKE A PRO</h2>
           <h3 className="text-lg font-semibold mb-2">Morning Naps (Under 18 months)</h3>
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Start no earlier than 2.5 hours after waking.</li>
@@ -88,7 +88,7 @@ const Chapter5 = () => {
             <p className="text-sm">Shift nap start time by 15 minutes earlier or later based on previous night's bedtime success. Watch how bedtime adjusts within 48 hours.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">3. ENVIRONMENT MATTERS (AGAIN)</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">3. ENVIRONMENT MATTERS (AGAIN)</h2>
           <p className="text-sm mb-2">Nap conditions should mimic bedtime: Dim light, consistent sound, and cool temperature. Avoid the stroller-to-crib transfer when possible; motion sleep is lighter and fragmented. If naps must happen on the go (daycare or errands), balance them with earlier bedtime that night.</p>
           
           {/* COMMON MISTAKE - Gold Box Style (Simulated) */}
@@ -97,7 +97,7 @@ const Chapter5 = () => {
             <p className="text-sm">Using car naps as the main nap. It may reset behavior but not brain rest. The deep sleep stage rarely activates in motion.</p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">4. THE NAP RESET ROUTINE</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">4. THE NAP RESET ROUTINE</h2>
           <p className="text-sm mb-2">Keep it under five minutes. The ritual consistency creates the same neurological "safety switch" as bedtime.</p>
           <ol className="list-decimal list-inside space-y-1 ml-4 text-sm mb-4">
             <li>Close curtains</li>
@@ -106,7 +106,7 @@ const Chapter5 = () => {
             <li>Lay down with transitional object (blanket or plush toy)</li>
           </ol>
           
-          <h2 className="text-xl font-semibold mb-3 text-sidebar-primary-foreground">5. SIGNS THE SCHEDULE NEEDS ADJUSTMENT</h2>
+          <h2 className="text-xl font-semibold mb-3 text-gray-900">5. SIGNS THE SCHEDULE NEEDS ADJUSTMENT</h2>
           <table className="min-w-full divide-y divide-gray-300 border border-gray-200 text-sm mb-4">
             <thead className="bg-gray-50">
               <tr>
@@ -137,7 +137,7 @@ const Chapter5 = () => {
           <p className="font-semibold text-sm mt-4 uppercase">Reflection Prompt:</p>
           <p className="text-sm">Which nap pattern gives you the calmest evenings? What small change would simplify your afternoons this week?</p>
           
-          <p className="font-semibold text-sm mt-4 uppercase text-center text-sidebar-primary-foreground">PROGRESS CUE</p>
+          <p className="font-semibold text-sm mt-4 uppercase text-center text-gray-900">PROGRESS CUE</p>
           <p className="text-sm text-center">By syncing nap timing and duration, you reduce overtiredness, the number 1 hidden enemy of sleep. You've now aligned the day with the night.</p>
         </div>
       </div>
