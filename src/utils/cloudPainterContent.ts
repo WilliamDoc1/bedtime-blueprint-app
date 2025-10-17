@@ -19,7 +19,7 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 4,
-    image: '/The Cloud Painter/cloud_painter_page_3.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_3_supplies.jpg', // New image for Page 4
     text: "But Pip just smiled. He gathered his supplies: a fluffy feather for a brush and dewdrops filled with the colors of the sunrise—a soft pink, a warm gold, and a sleepy, gentle blue.",
     audio: "/placeholder_audio.mp3",
   },
