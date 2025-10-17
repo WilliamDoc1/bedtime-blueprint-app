@@ -71,6 +71,10 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
 
   const handleAudioEnded = () => {
     setIsPlaying(false);
+    // Automatically scroll to the next page if audio ends and it's not the last page
+    if (emblaApi && selectedIndex < pages.length - 1) {
+      scrollNext();
+    }
   };
 
   // Effect to handle carousel state updates and manual navigation audio reset
@@ -124,10 +128,20 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                       alt={`Story page ${index + 1}`}
                       className="w-full h-full object-cover"
                     />
+                    {/* Previous Button - Positioned relative to the image panel */}
+                    <Button
+                      onClick={scrollPrev}
+                      disabled={!canScrollPrev}
+                      variant="outline"
+                      size="icon"
+                      className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
+                    >
+                      <ArrowLeft className="h-5 w-5" />
+                    </Button>
                   </div>
 
                   {/* Right Side: Text and Controls */}
-                  <div className="p-6 md:p-10 flex flex-col justify-between bg-white">
+                  <div className="p-6 md:p-10 flex flex-col justify-between bg-white relative">
                     <div className="text-lg leading-relaxed text-gray-800 font-serif">
                       {page.text.split('\n').map((paragraph, i) => {
                         // Apply drop cap only to the first paragraph of non-title/end pages
@@ -155,7 +169,7 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                           onClick={isPlaying ? handleAudioPause : handleAudioPlay}
                           variant="default"
                           size="lg"
-                          className="bg-lavender-500 hover:bg-lavender-600 text-white rounded-full px-6"
+                          className="bg-lavender-500 hover:bg-lavender-600 text-white text-base rounded-full px-6"
                         >
                           {isPlaying ? <Pause className="h-5 w-5 mr-2" /> : <Play className="h-5 w-5 mr-2" />}
                           {isPlaying ? "Pause" : "Listen"}
@@ -163,35 +177,23 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                       </div>
                       <p className="text-sm text-gray-600">Page {index + 1} of {pages.length}</p>
                     </div>
+
+                    {/* Next Button - Positioned absolutely in the top right of the text panel */}
+                    <Button
+                      onClick={scrollNext}
+                      disabled={!canScrollNext}
+                      variant="outline"
+                      size="icon"
+                      className="absolute top-4 right-4 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
+                    >
+                      <ArrowRight className="h-5 w-5" />
+                    </Button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Navigation Buttons (Positioned relative to the book container) */}
-        {/* Previous Button - Left side, centered vertically */}
-        <Button
-          onClick={scrollPrev}
-          disabled={!canScrollPrev}
-          variant="outline"
-          size="icon"
-          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
-        >
-          <ArrowLeft className="h-5 w-5" />
-        </Button>
-        
-        {/* Next Button - Right side, near the top right corner of the book spread */}
-        <Button
-          onClick={scrollNext}
-          disabled={!canScrollNext}
-          variant="outline"
-          size="icon"
-          className="absolute top-10 right-4 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
-        >
-          <ArrowRight className="h-5 w-5" />
-        </Button>
       </div>
     </div>
   );
