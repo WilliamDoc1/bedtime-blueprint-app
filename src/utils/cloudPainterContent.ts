@@ -45,17 +45,17 @@ export const CLOUD_PAINTER_STORY_PAGES = [
     page: 8,
     image: '/The Cloud Painter/cloud_painter_page_5.jpg',
     text: "“I want to paint the clouds,” Pip said, his voice small but steady, “so everyone below can see how beautiful the morning is.”",
-    audio: "/placeholder_audio.mp3",
+    audio: "/placeholder_audio.osp3",
   },
   {
     page: 9,
-    image: '/The Cloud Painter/cloud_painter_page_6.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_7.jpg',
     text: "The Wind hummed thoughtfully. \"What a lovely dream,\" it sighed. \"Let me help you.\" Gently, the Wind lifted Pip and his colors into the air.",
     audio: "/placeholder_audio.mp3",
   },
   {
     page: 10,
-    image: '/The Cloud Painter/cloud_painter_page_1.jpg', // Original Page 2 image, now used for Page 10 (Index 9)
+    image: '/The Cloud Painter/cloud_painter_page_7.jpg',
     text: "Together, they danced across the sky. Pip dipped his feather in gold and brushed it across a sleepy cloud. The Wind swirled the pinks and blues, creating a masterpiece of dawn.",
     audio: "/placeholder_audio.mp3",
   },
