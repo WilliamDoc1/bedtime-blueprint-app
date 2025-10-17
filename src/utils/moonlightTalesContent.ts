@@ -15,10 +15,10 @@ export const moonlightTales = [
   },
   {
     id: "lantern-tree",
-    title: "The Secret of the Lantern Tree",
+    title: "The Lantern Tree",
     description: "An adventurous story about a hidden tree that lights up the night with its glowing lanterns.",
     route: "/tales/lantern-tree",
-    coverImage: "/placeholder.svg", // Using a placeholder as no specific image was provided for this tale
+    coverImage: "/The Lantern Tree/Lantern Tree Cover Page.png",
   },
   {
     id: "cloud-painter",
