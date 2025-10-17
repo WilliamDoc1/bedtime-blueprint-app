@@ -29,9 +29,9 @@ export const moonlightTales = [
   },
   {
     id: "willow",
-    title: "Willow's Whispering Wind",
-    description: "A gentle story about Willow, who learns to listen to the secrets carried by the wind.",
+    title: "Willow and the Sleepy Sea",
+    description: "A gentle story about a little whale who sings the ocean to sleep.",
     route: "/tales/willow",
-    coverImage: "/placeholder.svg", // Using a placeholder
+    coverImage: "/Willow and the Sleepy Sea/Willow Cover.jpg",
   },
 ];

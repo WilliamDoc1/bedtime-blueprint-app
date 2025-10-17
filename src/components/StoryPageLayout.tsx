@@ -23,16 +23,17 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
   const isCoverPage = pageIndex === 0;
   
   // Check for known title pages to prevent drop cap styling on titles
-  const isTitlePage = page.text === "The Lantern Tree" || page.text === "Luna and the Star Garden" || page.text === "Milo and the Moon Garden" || page.text === "The Cloud Painter" || page.text === "TITLE PAGE";
+  const isTitlePage = page.text === "The Lantern Tree" || page.text === "Luna and the Star Garden" || page.text === "Milo and the Moon Garden" || page.text === "The Cloud Painter" || page.text === "Willow and the Sleepy Sea" || page.text === "TITLE PAGE";
   const isEndPage = page.text === "THE END";
 
   // Specific styling for covers to crop the bottom white space
   const isLanternTreeCover = isCoverPage && page.image.includes("Lantern Tree Cover Page.png");
   const isMiloCover = isCoverPage && page.image.includes("Milo Cover.jpg");
   const isCloudPainterCover = isCoverPage && page.image.includes("Cloud Painter Cover.jpg");
+  const isWillowCover = isCoverPage && page.image.includes("Willow Cover.jpg");
   
   let objectPositionClass = "object-cover";
-  if (isLanternTreeCover || isMiloCover || isCloudPainterCover) {
+  if (isLanternTreeCover || isMiloCover || isCloudPainterCover || isWillowCover) {
     objectPositionClass = "object-cover object-top";
   }
 
