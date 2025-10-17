@@ -29,7 +29,8 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
   handleAudioPause,
   audioRef,
 }) => {
-  const isTitlePage = page.text === "The Lantern Tree" || page.text === "TITLE PAGE";
+  // Check for known title pages to prevent drop cap styling on titles
+  const isTitlePage = page.text === "The Lantern Tree" || page.text === "Luna and the Star Garden" || page.text === "TITLE PAGE";
   const isEndPage = page.text === "THE END";
 
   const renderTextContent = () => {
@@ -65,8 +66,8 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
       {/* Right Column: Text and Controls (40%) */}
       <div className="w-[40%] bg-white p-6 md:p-8 flex flex-col justify-between overflow-y-auto">
         
-        {/* Story Text */}
-        <div className="text-lg leading-relaxed text-gray-800 font-serif flex-grow">
+        {/* Story Text - Added flex flex-col justify-center for vertical centering */}
+        <div className="text-lg leading-relaxed text-gray-800 font-serif flex-grow flex flex-col justify-center">
           {renderTextContent()}
         </div>
 
