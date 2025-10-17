@@ -1,4 +1,5 @@
 import React from 'react';
+import JournalEntryForm from '@/components/JournalEntryForm';
 
 const BedtimeJournalPrompts = () => {
   return (
@@ -26,6 +27,8 @@ const BedtimeJournalPrompts = () => {
           <li>What change made the biggest difference this week?</li>
         </ul>
       </div>
+      
+      <JournalEntryForm />
     </div>
   );
 };
