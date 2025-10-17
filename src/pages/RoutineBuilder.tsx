@@ -1,12 +1,14 @@
 "use client";
 
 import React from "react";
+import RoutineBuilderForm from "@/components/RoutineBuilderForm";
 
 const RoutineBuilder: React.FC = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Custom Bedtime Routine Builder</h1>
-      <p className="text-lg text-center">This page will provide tools to help you design a personalized bedtime routine.</p>
+    <div className="content-wrapper p-6 md:p-8 max-w-3xl mx-auto text-center">
+      <h1 className="text-3xl font-bold mb-6 text-sidebar-primary-foreground">Custom Bedtime Routine Builder</h1>
+      <p className="text-lg text-gray-600 mb-8">Design and save your personalized 5-step routine sequence.</p>
+      <RoutineBuilderForm />
     </div>
   );
 };
