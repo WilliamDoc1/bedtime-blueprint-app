@@ -5,42 +5,56 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const WelcomeCover: React.FC = () => {
-  // Using the new cover image path
-  const coverImagePath = "/cover_background.png"; 
+  const logoPath = "/dreamdocs_logo.png"; 
+  const motto = "GUIDED BY SCIENCE. ROOTED IN CONNECTION";
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-lavender-50">
-      {/* Background Image/Illustration */}
-      <div className="absolute inset-0">
-        <img
-          src={coverImagePath}
-          alt="Bedtime Blueprint Cover"
-          className="w-full h-full object-cover object-center"
-        />
-        {/* Removed dark overlay as the new image is light */}
-      </div>
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      {/* Header/Top Bar */}
+      <header className="w-full p-4 md:p-6 border-b border-gray-100 bg-white shadow-sm">
+        <div className="container mx-auto max-w-6xl">
+          <img
+            src={logoPath}
+            alt="DreamDocs Logo"
+            className="h-8 md:h-10 object-contain"
+          />
+        </div>
+      </header>
 
-      {/* Content - We will overlay the title and button on the image */}
-      <div className="relative z-10 text-center p-6 md:p-12 max-w-4xl mx-auto mt-40 md:mt-60">
-        {/* The image already contains the main title, but we keep the button for navigation */}
-        
-        {/* We are keeping the title here for accessibility and if the user wants to change the text later, 
-            but we will make it transparent/less visible if the image already contains it, 
-            or we can adjust the text color to contrast with the image's moon area. 
-            Since the image is mostly light gray/yellow, let's use a dark color for contrast. 
-            However, since the user requested the title 'Bedtime Blueprint: Gentle Nights Without Cry-It-Out', 
-            which is slightly different from the image text, I will keep the requested title and position it clearly.
-        */}
-        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 drop-shadow-md mb-8 leading-tight">
-          Bedtime Blueprint: Gentle Nights Without Cry-It-Out
-        </h1>
-        
-        <Button asChild size="lg" className="bg-gold-400 hover:bg-gold-500 text-white text-lg font-bold py-3 px-8 shadow-xl transition-transform duration-300 hover:scale-[1.05]">
-          <Link to="/guide/toc">
-            Start Your 21-Day Guide
-          </Link>
-        </Button>
-      </div>
+      {/* Main Content Area (Centered) */}
+      <main className="flex-1 flex items-center justify-center p-6 md:p-12">
+        <div className="text-center max-w-3xl mx-auto">
+          {/* Main Title */}
+          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tighter">
+            Bedtime Blueprint: Gentle Nights Without Cry-It-Out
+          </h1>
+          
+          {/* Subtitle/Description */}
+          <p className="text-xl md:text-2xl text-gray-600 mb-10 font-light">
+            A 21-day guide blending gentle structure with emotional safety to help your child find peaceful, predictable rest.
+          </p>
+          
+          {/* Call to Action Button */}
+          <Button 
+            asChild 
+            size="lg" 
+            className="bg-lavender-500 hover:bg-lavender-600 text-white text-lg font-bold py-3 px-8 shadow-lg transition-transform duration-300 hover:scale-[1.05] rounded-full"
+          >
+            <Link to="/guide/toc">
+              Start Your 21-Day Guide
+            </Link>
+          </Button>
+        </div>
+      </main>
+
+      {/* Footer/Motto */}
+      <footer className="w-full p-4 md:p-6 border-t border-gray-100 bg-white">
+        <div className="container mx-auto max-w-6xl text-center">
+          <p className="text-sm font-medium text-gray-500 tracking-widest uppercase">
+            {motto}
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
