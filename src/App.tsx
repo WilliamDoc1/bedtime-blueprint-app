@@ -61,13 +61,27 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) =
 
 const AppContent = () => {
   const isMobile = useIsMobile();
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(true); // New state
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(prev => !prev);
+  };
+
+  // Calculate sidebar width class
+  const sidebarWidthClass = isSidebarOpen ? "w-64" : "w-16";
+  const sidebarCollapsedClass = isSidebarOpen ? "" : "items-center"; // Center items when collapsed
 
   return (
     <div className="flex min-h-screen">
       {/* Desktop Sidebar */}
       {!isMobile && (
-        <aside className="hidden md:flex w-64 flex-shrink-0 border-r border-sidebar-border">
-          <SidebarNav />
+        <aside 
+          className={`hidden md:flex ${sidebarWidthClass} flex-shrink-0 border-r border-sidebar-border transition-all duration-300 ${sidebarCollapsedClass}`}
+        >
+          <SidebarNav 
+            isCollapsed={!isSidebarOpen} 
+            toggleCollapse={toggleSidebar} 
+          />
         </aside>
       )}
 

@@ -6,7 +6,12 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { BookText, LayoutDashboard, Sparkles, ScrollText, ListChecks, NotebookText, Settings } from "lucide-react"; // Added NotebookText and Settings icons
 
-export const SidebarNav: React.FC = () => {
+interface SidebarNavProps {
+  isCollapsed: boolean;
+  toggleCollapse: () => void;
+}
+
+export const SidebarNav: React.FC<SidebarNavProps> = ({ isCollapsed, toggleCollapse }) => {
   const location = useLocation();
 
   const navItems = [
@@ -49,9 +54,24 @@ export const SidebarNav: React.FC = () => {
 
   return (
     <nav className="flex flex-col space-y-1 p-4 w-full">
-      <h2 className="mb-4 px-4 text-lg font-semibold tracking-tight text-sidebar-foreground">
-        DreamDocs
-      </h2>
+      <div 
+        className={cn(
+          "mb-4 px-4 cursor-pointer flex items-center h-10",
+          isCollapsed ? "justify-center" : "justify-start"
+        )}
+        onClick={toggleCollapse}
+      >
+        <h2 className={cn(
+          "text-lg font-semibold tracking-tight text-sidebar-foreground transition-opacity duration-300",
+          isCollapsed ? "opacity-0 w-0" : "opacity-100 w-auto"
+        )}>
+          DreamDocs
+        </h2>
+        {isCollapsed && (
+          <BookText className="h-6 w-6 text-sidebar-foreground" />
+        )}
+      </div>
+      
       {navItems.map((item) => (
         <Button
           key={item.href}
@@ -59,12 +79,15 @@ export const SidebarNav: React.FC = () => {
           variant={location.pathname.startsWith(item.href) ? "secondary" : "ghost"}
           className={cn(
             "justify-start text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
-            location.pathname.startsWith(item.href) && "bg-sidebar-accent text-sidebar-accent-foreground"
+            location.pathname.startsWith(item.href) && "bg-sidebar-accent text-sidebar-accent-foreground",
+            isCollapsed ? "w-full p-2 h-10" : "w-auto"
           )}
         >
-          <Link to={item.href}>
+          <Link to={item.href} className="flex items-center w-full">
             {item.icon}
-            {item.title}
+            {!isCollapsed && (
+              <span className="truncate">{item.title}</span>
+            )}
           </Link>
         </Button>
       ))}
