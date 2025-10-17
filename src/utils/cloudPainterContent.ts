@@ -7,7 +7,7 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 2,
-    image: '/The Cloud Painter/cloud_painter_page_1.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_9.jpg', // New image for Page 2 (Index 1)
     text: "High above the world, where the mountains touched the sky, lived a tiny mouse named Pip. While other mice dreamed of cheese, Pip dreamed of colors. He wanted to paint the clouds.",
     audio: "/placeholder_audio.mp3",
   },
@@ -55,7 +55,7 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 10,
-    image: '/The Cloud Painter/cloud_painter_page_9.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_1.jpg', // Original Page 2 image, now used for Page 10 (Index 9)
     text: "Together, they danced across the sky. Pip dipped his feather in gold and brushed it across a sleepy cloud. The Wind swirled the pinks and blues, creating a masterpiece of dawn.",
     audio: "/placeholder_audio.mp3",
   },

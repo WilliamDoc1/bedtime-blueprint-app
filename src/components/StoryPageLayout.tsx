@@ -80,17 +80,8 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
   // Split layout for all other pages
   return (
     <div className="flex h-[600px] w-full">
-      {/* Left Column: Image (60%) */}
-      <div className="w-[60%] relative overflow-hidden border-r-4 border-gold-400">
-        <img
-          src={page.image}
-          alt={`Story page ${pageIndex + 1}`}
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      {/* Right Column: Text and Controls (40%) */}
-      <div className="w-[40%] bg-white p-6 md:p-8 flex flex-col justify-between overflow-y-auto">
+      {/* Left Column: Text and Controls (40%) - Now first */}
+      <div className="w-[40%] bg-white p-6 md:p-8 flex flex-col justify-between overflow-y-auto border-r-4 border-gold-400">
         
         {/* Story Text - Vertically centered */}
         <div className="text-lg leading-relaxed text-gray-800 font-serif flex-grow flex flex-col justify-center">
@@ -101,6 +92,15 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
         <div className="mt-6 pt-4 border-t border-gray-200 flex justify-end items-center flex-shrink-0">
           <p className="text-sm text-gray-600">Page {pageIndex + 1} of {totalPages}</p>
         </div>
+      </div>
+      
+      {/* Right Column: Image (60%) - Now second (following the text) */}
+      <div className="w-[60%] relative overflow-hidden">
+        <img
+          src={page.image}
+          alt={`Story page ${pageIndex + 1}`}
+          className="w-full h-full object-cover"
+        />
       </div>
     </div>
   );
