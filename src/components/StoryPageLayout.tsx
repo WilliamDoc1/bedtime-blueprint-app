@@ -13,7 +13,6 @@ interface StoryPageLayoutProps {
   page: StoryPage;
   pageIndex: number;
   totalPages: number;
-  // Removed audio-related props
 }
 
 const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
@@ -21,11 +20,21 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
   pageIndex,
   totalPages,
 }) => {
+  const isCoverPage = pageIndex === 0;
+  
   // Check for known title pages to prevent drop cap styling on titles
   const isTitlePage = page.text === "The Lantern Tree" || page.text === "Luna and the Star Garden" || page.text === "TITLE PAGE";
   const isEndPage = page.text === "THE END";
 
+  // Specific styling for Lantern Tree cover to crop the bottom white space
+  const isLanternTreeCover = isCoverPage && page.image.includes("Lantern Tree Cover Page.png");
+  const objectPositionClass = isLanternTreeCover ? "object-cover object-top" : "object-cover";
+
+
   const renderTextContent = () => {
+    // If it's the cover page, we render no text content here.
+    if (isCoverPage) return null;
+
     return page.text.split('\n').map((paragraph, i) => {
       // Apply drop cap only to the first paragraph of non-title/end pages
       if (i === 0 && paragraph.length > 0 && !isTitlePage && !isEndPage) {
@@ -44,6 +53,24 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
     });
   };
 
+  // --- Render Logic ---
+
+  if (isCoverPage) {
+    return (
+      <div className="flex h-[600px] w-full">
+        {/* Full width image container for cover page */}
+        <div className="w-full relative overflow-hidden">
+          <img
+            src={page.image}
+            alt={`Story cover`}
+            className={`w-full h-full ${objectPositionClass}`}
+          />
+        </div>
+      </div>
+    );
+  }
+
+  // Split layout for all other pages
   return (
     <div className="flex h-[600px] w-full">
       {/* Left Column: Image (60%) */}
@@ -58,14 +85,13 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
       {/* Right Column: Text and Controls (40%) */}
       <div className="w-[40%] bg-white p-6 md:p-8 flex flex-col justify-between overflow-y-auto">
         
-        {/* Story Text - Added flex flex-col justify-center for vertical centering */}
+        {/* Story Text - Vertically centered */}
         <div className="text-lg leading-relaxed text-gray-800 font-serif flex-grow flex flex-col justify-center">
           {renderTextContent()}
         </div>
 
-        {/* Controls and Page Number */}
+        {/* Page Number */}
         <div className="mt-6 pt-4 border-t border-gray-200 flex justify-end items-center flex-shrink-0">
-          {/* Removed audio controls */}
           <p className="text-sm text-gray-600">Page {pageIndex + 1} of {totalPages}</p>
         </div>
       </div>
