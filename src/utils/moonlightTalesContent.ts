@@ -25,7 +25,7 @@ export const moonlightTales = [
     title: "The Cloud Painter",
     description: "Meet the whimsical artist who paints the clouds with vibrant colors every evening.",
     route: "/tales/cloud-painter",
-    coverImage: "/placeholder.svg", // Using a placeholder
+    coverImage: "/The Cloud Painter/Cloud Painter Cover.jpg",
   },
   {
     id: "willow",
