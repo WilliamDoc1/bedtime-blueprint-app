@@ -39,7 +39,7 @@ const BedtimeScripts = () => {
           </blockquote>
 
           {/* PARENT NOTE - Final Guidance */}
-          <div className="bg-lavender-mist p-4 rounded-lg my-4 border border-lavender-accent text-sm">
+          <div className="bg-lavender-mist p-4 rounded-lg my-4 border border-lavender-accent text-sm text-center">
             <h4 className="font-semibold text-sm mb-1">Parent Note:</h4>
             <p>Speak gently, pause between phrases, and repeat consistently. Your tone is the anchor that restores emotional safety.</p>
           </div>
