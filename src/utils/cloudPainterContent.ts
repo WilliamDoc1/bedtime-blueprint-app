@@ -31,13 +31,13 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 6,
-    image: '/The Cloud Painter/cloud_painter_page_3.jpg', // Updated image for Page 6
+    image: '/The Cloud Painter/cloud_painter_page_3.jpg',
     text: "At the very top, he reached out his feather and swished it across a passing cloud. The cloud giggled, a puff of white vapor, and danced away.",
     audio: "/placeholder_audio.mp3",
   },
   {
     page: 7,
-    image: '/The Cloud Painter/cloud_painter_page_6.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_4.jpg',
     text: "A gentle swirl of air tickled his whiskers. It was the Wind, a kind and curious spirit. \"What are you doing, little one?\" the Wind whispered.",
     audio: "/placeholder_audio.mp3",
   },
