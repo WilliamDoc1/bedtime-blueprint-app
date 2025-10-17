@@ -37,7 +37,7 @@ const WelcomeCover: React.FC = () => {
             size="lg" 
             className="bg-lavender-500 hover:bg-lavender-600 text-white text-lg font-bold py-3 px-8 shadow-lg transition-transform duration-300 hover:scale-[1.05] rounded-full"
           >
-            <Link to="/guide/toc">
+            <Link to="/guide-hub">
               Start Your 21-Day Guide
             </Link>
           </Button>

@@ -45,6 +45,7 @@ import DailyLogFormPage from "./pages/DailyLogFormPage";
 import BedtimeScripts from "./pages/scripts";
 import EnvironmentChecklist from "./pages/checklist";
 import TrackerHub from "./pages/TrackerHub";
+import GuideHub from "./pages/GuideHub"; // Import the new GuideHub
 
 
 const queryClient = new QueryClient();
@@ -99,6 +100,7 @@ const AppContent = () => {
 const AppRoutes: React.FC = () => (
   <Routes>
     <Route path="/" element={<Index />} />
+    <Route path="/guide-hub" element={<GuideHub />} /> {/* New Guide Hub Route */}
     <Route path="/tracker-hub" element={<TrackerHub />} /> {/* New Tracker Hub */}
     <Route path="/guide/toc" element={<TableOfContents />} />
     <Route path="/guide/ch/1" element={<Chapter1 />} />
