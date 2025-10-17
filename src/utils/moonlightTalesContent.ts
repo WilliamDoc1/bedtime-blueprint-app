@@ -8,7 +8,7 @@ export const moonlightTales = [
   },
   {
     id: "milo",
-    title: "Milo's Dream Garden",
+    title: "Milo and the Moon Garden",
     description: "Join Milo as he discovers a magical garden that grows only in dreams.",
     route: "/tales/milo",
     coverImage: "/Milo and the Moon Garden/Milo Cover.jpg",
