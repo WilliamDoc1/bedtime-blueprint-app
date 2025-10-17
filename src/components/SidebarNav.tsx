@@ -56,10 +56,9 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({ isCollapsed, toggleColla
     <nav className="flex flex-col space-y-1 p-4 w-full">
       <div 
         className={cn(
-          "mb-4 px-4 cursor-pointer flex items-center h-10",
+          "mb-4 px-4 flex items-center h-10",
           isCollapsed ? "justify-center" : "justify-start"
         )}
-        onClick={toggleCollapse}
       >
         <h2 className={cn(
           "text-lg font-semibold tracking-tight text-sidebar-foreground transition-opacity duration-300",
