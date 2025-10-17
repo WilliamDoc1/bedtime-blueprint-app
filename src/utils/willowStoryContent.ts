@@ -49,7 +49,7 @@ export const WILLOW_STORY_PAGES = [
   },
   {
     page: 9,
-    image: '/Willow and the Sleepy Sea/willow_page_8.jpg',
+    image: '/Willow and the Sleepy Sea/willow_page_8.png',
     text: "The moon seemed to smile, sending a bright beam of light down to dance with her tune. The whole ocean shimmered, singing itself to sleep—not awake, but into a beautiful dream.",
     audio: "/placeholder_audio.mp3",
   },
