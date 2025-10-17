@@ -31,7 +31,7 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 6,
-    image: '/The Cloud Painter/cloud_painter_page_5.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_3.jpg', // Updated image for Page 6
     text: "At the very top, he reached out his feather and swished it across a passing cloud. The cloud giggled, a puff of white vapor, and danced away.",
     audio: "/placeholder_audio.mp3",
   },
