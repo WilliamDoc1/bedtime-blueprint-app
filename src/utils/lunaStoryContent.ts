@@ -2,21 +2,111 @@ export const lunaStoryPages = [
   {
     image: "/Luna and the Star Garden/luna_page_1.jpg",
     audio: "/Luna and the Star Garden/luna_audio_1.mp3",
-    text: "Once upon a time, in a village nestled beneath the tallest mountains, lived a curious little girl named Luna. Every night, Luna would sit by her window, gazing at the twinkling stars, each one a tiny diamond scattered across a velvet cloth. One evening, as the moon cast its gentle glow, Luna saw something peculiar. A star, usually so bright and steadfast, seemed to wobble, then slowly, gently, it began to fall.",
+    text: "TITLE PAGE",
   },
   {
     image: "/Luna and the Star Garden/luna_page_2.jpg",
     audio: "/Luna and the Star Garden/luna_audio_2.mp3",
-    text: "It wasn't a fiery, dramatic fall, but a soft, shimmering descent, like a dandelion seed floating to the ground. Luna watched, her heart fluttering with a mix of wonder and worry, as the star landed softly in her backyard, nestled amongst her mother's lavender bushes. It was small, no bigger than her hand, and pulsed with a faint, warm light. Carefully, Luna tiptoed outside. The star felt smooth and cool to the touch, like polished sea glass. It hummed a soft, sad tune. 'Are you lost?' Luna whispered, and the star pulsed a little brighter, as if in agreement. Luna knew she had to help it. A star belonged in the sky, not in a lavender bush.",
+    text: "",
   },
   {
     image: "/Luna and the Star Garden/luna_page_3.jpg",
     audio: "/Luna and the Star Garden/luna_audio_3.mp3",
-    text: "She gently scooped the star into her hands and looked up at the vast, dark sky. How would she get it back? The mountains were too tall, and her arms, though strong for a little girl, were not long enough to reach the clouds. She thought and thought, her brow furrowed in concentration. Then, an idea sparked in her mind, as bright as the little star itself. She remembered her father's stories of the highest peak, where the wind carried wishes to the heavens. With the star cradled safely, Luna began her journey. She climbed through whispering forests, past sleeping streams, and over smooth, grey rocks. The star in her hands glowed steadily, lighting her path.",
+    text: "Once upon a time... sprinkled her with magic.",
   },
   {
     image: "/Luna and the Star Garden/luna_page_4.jpg",
     audio: "/Luna and the Star Garden/luna_audio_4.mp3",
-    text: "Finally, as dawn painted the sky with hues of rose and gold, Luna reached the highest peak. The wind here was strong and clear, carrying the scent of pine and distant rain. She held the star up high, her small voice clear and true. 'Please, wind,' she called, 'take this lost star home!' The wind swirled around her, a gentle, invisible hand. The little star shimmered, then lifted from her grasp, carried upwards on a soft current. Higher and higher it went, a tiny beacon against the brightening sky, until it rejoined its family of stars, twinkling once more in its rightful place. Luna smiled, a deep, contented smile. She had helped a lost star find its way home. As she descended the mountain, the sun fully risen, she knew that every night, when she looked up, she would remember the little star she had saved, and the magic of a night spent helping a friend.",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_5.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_5.mp3",
+    text: "Every evening, Luna loved to wander... only a kind heart could hear.",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_6.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_6.mp3",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_7.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_7.mp3",
+    text: "One night, Luna noticed a tiny star... why are you trembling?",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_8.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_8.mp3",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_9.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_9.mp3",
+    text: "I've lost my sparkle... need my dreams.",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_10.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_10.mp3",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_11.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_11.mp3",
+    text: "Luna thought for a moment... finding lost magic.",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_12.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_12.mp3",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_13.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_13.mp3",
+    text: "So together, Luna and the tiny star... silver trails in the night air.",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_14.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_14.mp3",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_15.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_15.mp3",
+    text: "When they reached the Glowing Meadow... happiest dream you've ever had.",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_16.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_16.mp3",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_17.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_17.mp3",
+    text: "The star twinkled as it nestled... I can shine again!",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_18.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_18.mp3",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_19.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_19.mp3",
+    text: "The star floated back into the night sky... her eyelids heavy.",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_20.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_20.mp3",
+    text: "",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_21.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_21.mp3",
+    text: "Curling into a soft patch of moss... surrounded by magic, kindness, and twinkling lights.",
+  },
+  {
+    image: "/Luna and the Star Garden/luna_page_22.jpg",
+    audio: "/Luna and the Star Garden/luna_audio_22.mp3",
+    text: "THE END",
   },
 ];
