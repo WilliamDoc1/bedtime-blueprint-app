@@ -34,15 +34,18 @@ const BedtimeScripts = () => {
           </ul>
 
           <h2 className="text-xl font-semibold mb-3 text-gray-900 border-b pb-2">Boundary Reset Script (for repeated protests)</h2>
-          <blockquote className="border-l-4 border-gold-accent pl-4 italic text-sm mb-6">
+          {/* Removed border-l-4 border-gold-accent */}
+          <blockquote className="pl-4 italic text-sm mb-6">
             "It's still bedtime. I'll check in after two minutes. You can lie down and rest while you wait."
           </blockquote>
-
-          {/* PARENT NOTE - Final Guidance */}
-          <div className="bg-lavender-mist p-4 rounded-lg my-4 border border-lavender-accent text-sm text-center max-w-sm mx-auto">
-            <h4 className="font-semibold text-sm mb-1">Parent Note:</h4>
-            <p>Speak gently, pause between phrases, and repeat consistently. Your tone is the anchor that restores emotional safety.</p>
-          </div>
+        </div>
+      </div>
+      
+      {/* PARENT NOTE - Moved and Centered on the page */}
+      <div className="mt-12 pt-6 border-t border-gray-200">
+        <div className="bg-lavender-mist p-4 rounded-lg border border-lavender-accent text-sm text-center max-w-sm mx-auto">
+          <h4 className="font-semibold text-sm mb-1">Parent Note:</h4>
+          <p>Speak gently, pause between phrases, and repeat consistently. Your tone is the anchor that restores emotional safety.</p>
         </div>
       </div>
     </div>
