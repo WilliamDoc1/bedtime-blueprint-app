@@ -5,19 +5,16 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const WelcomeCover: React.FC = () => {
-  const logoPath = "/dreamdocs_logo.png"; 
   const motto = "GUIDED BY SCIENCE. ROOTED IN CONNECTION";
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       {/* Header/Top Bar */}
       <header className="w-full p-4 md:p-6 border-b border-gray-100 bg-white shadow-sm">
-        <div className="container mx-auto max-w-6xl">
-          <img
-            src={logoPath}
-            alt="DreamDocs Logo"
-            className="h-8 md:h-10 object-contain"
-          />
+        <div className="container mx-auto max-w-6xl text-center">
+          <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+            DreamDocs
+          </h1>
         </div>
       </header>
 
