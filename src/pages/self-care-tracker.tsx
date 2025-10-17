@@ -19,9 +19,9 @@ const SelfCareTracker = () => {
           {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].map((day) => (
             <tr key={day}>
               <td className="px-3 py-3 whitespace-nowrap font-semibold">{day}</td>
-              <td className="px-3 py-3 whitespace-nowrap"></td>
-              <td className="px-3 py-3 whitespace-nowrap"></td>
-              <td className="px-3 py-3 whitespace-nowrap"></td>
+              <td className="px-3 py-3 whitespace-nowrap"></td> {/* Placeholder for input */}
+              <td className="px-3 py-3 whitespace-nowrap"></td> {/* Placeholder for input */}
+              <td className="px-3 py-3 whitespace-nowrap"></td> {/* Placeholder for input */}
             </tr>
           ))}
         </tbody>
