@@ -111,7 +111,7 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
     <div className="container mx-auto p-4 max-w-5xl">
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">{title}</h1>
 
-      <div className="relative bg-white shadow-2xl rounded-xl overflow-hidden border-4 border-gold-400">
+      <div className="relative bg-white shadow-2xl rounded-xl overflow-hidden border-[6px] border-gold-400">
         <div className="embla" ref={emblaRef}>
           <div className="embla__container flex">
             {pages.map((page, index) => (
@@ -127,14 +127,24 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                   </div>
 
                   {/* Right Side: Text and Controls */}
-                  <div className="p-6 md:p-10 flex flex-col justify-between bg-gray-50/50">
+                  <div className="p-6 md:p-10 flex flex-col justify-between bg-white">
                     <div className="text-lg leading-relaxed text-gray-800 font-serif">
-                      {/* Simple text rendering. For complex formatting, this would need markdown or rich text parsing. */}
-                      {page.text.split('\n').map((paragraph, i) => (
-                        <p key={i} className={cn("mb-4", i === 0 && page.text.length > 50 && "first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-lavender-500")}>
-                          {paragraph}
-                        </p>
-                      ))}
+                      {page.text.split('\n').map((paragraph, i) => {
+                        // Apply drop cap only to the first paragraph of non-title/end pages
+                        if (i === 0 && paragraph.length > 0 && page.text !== "TITLE PAGE" && page.text !== "THE END") {
+                          const firstLetter = paragraph.charAt(0);
+                          const restOfText = paragraph.substring(1);
+                          return (
+                            <p key={i} className="mb-4">
+                              <span className="float-left text-6xl font-bold mr-2 text-lavender-500 leading-none">
+                                {firstLetter}
+                              </span>
+                              {restOfText}
+                            </p>
+                          );
+                        }
+                        return <p key={i} className="mb-4">{paragraph}</p>;
+                      })}
                     </div>
                     
                     {/* Controls and Page Number */}
@@ -143,11 +153,11 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                         <audio ref={audioRef} onEnded={handleAudioEnded} src={page.audio} className="hidden" />
                         <Button
                           onClick={isPlaying ? handleAudioPause : handleAudioPlay}
-                          variant="secondary"
-                          size="sm"
-                          className="bg-lavender-400 hover:bg-lavender-500 text-white"
+                          variant="default"
+                          size="lg"
+                          className="bg-lavender-500 hover:bg-lavender-600 text-white rounded-full px-6"
                         >
-                          {isPlaying ? <Pause className="h-4 w-4 mr-2" /> : <Play className="h-4 w-4 mr-2" />}
+                          {isPlaying ? <Pause className="h-5 w-5 mr-2" /> : <Play className="h-5 w-5 mr-2" />}
                           {isPlaying ? "Pause" : "Listen"}
                         </Button>
                       </div>
@@ -160,24 +170,27 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
           </div>
         </div>
 
-        {/* Navigation Buttons (Outside the slide content) */}
+        {/* Navigation Buttons (Positioned relative to the book container) */}
+        {/* Previous Button - Left side, centered vertically */}
         <Button
           onClick={scrollPrev}
           disabled={!canScrollPrev}
           variant="outline"
           size="icon"
-          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg"
+          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
         >
-          <ArrowLeft className="h-4 w-4" />
+          <ArrowLeft className="h-5 w-5" />
         </Button>
+        
+        {/* Next Button - Right side, near the top right corner of the book spread */}
         <Button
           onClick={scrollNext}
           disabled={!canScrollNext}
           variant="outline"
           size="icon"
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg"
+          className="absolute top-10 right-4 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
         >
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="h-5 w-5" />
         </Button>
       </div>
     </div>
