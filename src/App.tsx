@@ -40,7 +40,7 @@ import Willow from "./pages/tales/Willow";
 // Import new/renamed template pages
 import SleepLog from "./pages/SleepLog";
 import SelfCareTracker from "./pages/SelfCareTracker";
-import ReflectionJournal from "./pages/ReflectionJournal";
+import BedtimeJournalPrompts from "./pages/journal-prompts"; // Corrected import name and path
 import RoutineBuilder from "./pages/RoutineBuilder";
 import Tracker from "./pages/Tracker"; // Import the new Tracker component
 import BedtimeScripts from "./pages/scripts"; // Import the new BedtimeScripts component
@@ -114,7 +114,7 @@ const AppRoutes: React.FC = () => (
     <Route path="/log" element={<SleepLog />} />
     <Route path="/tracker" element={<Tracker />} />
     <Route path="/self-care-tracker" element={<SelfCareTracker />} />
-    <Route path="/journal-prompts" element={<ReflectionJournal />} />
+    <Route path="/journal-prompts" element={<BedtimeJournalPrompts />} /> {/* Updated component name */}
     <Route path="/routine-builder" element={<RoutineBuilder />} />
     <Route path="/templates" element={<Templates />} />
     <Route path="/tales/toc" element={<MoonlightStories />} />
@@ -124,7 +124,7 @@ const AppRoutes: React.FC = () => (
     <Route path="/tales/cloud-painter" element={<CloudPainter />} />
     <Route path="/tales/willow" element={<Willow />} />
     <Route path="/scripts" element={<BedtimeScripts />} />
-    <Route path="/checklist" element={<EnvironmentChecklist />} /> {/* New route for Checklist */}
+    <Route path="/checklist" element={<EnvironmentChecklist />} />
     <Route path="/my-dreams" element={<div>My Dreams Page</div>} />
     <Route path="/settings" element={<div>Settings Page</div>} />
     <Route path="/logout" element={<div>Logging out...</div>} />
