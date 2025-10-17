@@ -1,11 +1,15 @@
 "use client";
 
 import React from 'react';
-import LunaStoryViewer from "@/components/LunaStoryViewer";
+import StoryCarousel from "@/components/StoryCarousel";
+import { LUNA_STORY_PAGES_11 } from "@/utils/luna11PageContent";
 
 const Luna: React.FC = () => {
   return (
-    <LunaStoryViewer />
+    <StoryCarousel 
+      pages={LUNA_STORY_PAGES_11} 
+      title="Luna and the Star Garden" 
+    />
   );
 };
 
