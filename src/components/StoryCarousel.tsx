@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, Play, Pause } from "lucide-react";
-import { cn } from "@/lib/utils";
-import StoryPageLayout from "./StoryPageLayout"; // Import the new layout component
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import StoryPageLayout from "./StoryPageLayout";
 
 interface StoryPage {
   image: string;
@@ -23,8 +22,6 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const updateCarouselState = useCallback((emblaApi: any) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
@@ -32,82 +29,31 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
     setCanScrollNext(emblaApi.canScrollNext());
   }, []);
 
-  const stopAndResetAudio = useCallback(() => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-    setIsPlaying(false);
-  }, []);
-
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollPrev();
-      stopAndResetAudio();
     }
-  }, [emblaApi, stopAndResetAudio]);
+  }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollNext();
-      stopAndResetAudio();
     }
-  }, [emblaApi, stopAndResetAudio]);
+  }, [emblaApi]);
 
-  const handleAudioPlay = () => {
-    if (audioRef.current) {
-      audioRef.current.play().catch(error => {
-        console.warn("Audio playback failed:", error);
-      });
-      setIsPlaying(true);
-    }
-  };
-
-  const handleAudioPause = () => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      setIsPlaying(false);
-    }
-  };
-
-  const handleAudioEnded = () => {
-    setIsPlaying(false);
-    // Automatically scroll to the next page if audio ends and it's not the last page
-    if (emblaApi && selectedIndex < pages.length - 1) {
-      scrollNext();
-    }
-  };
-
-  // Effect to handle carousel state updates and manual navigation audio reset
+  // Effect to handle carousel state updates
   useEffect(() => {
     if (!emblaApi) return;
 
     emblaApi.on("select", updateCarouselState);
     emblaApi.on("reInit", updateCarouselState);
     updateCarouselState(emblaApi);
-
-    const handleSelect = () => {
-      stopAndResetAudio();
-    };
-    
-    emblaApi.on("select", handleSelect);
     
     return () => {
-      emblaApi.off("select", handleSelect);
+      emblaApi.off("select", updateCarouselState);
     }
 
-  }, [emblaApi, updateCarouselState, stopAndResetAudio]);
-
-  // Effect to handle audio source loading when selectedIndex changes
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.src = pages[selectedIndex].audio;
-      audioRef.current.load();
-      audioRef.current.onended = handleAudioEnded;
-      // Do not autoplay, wait for user interaction
-      setIsPlaying(false);
-    }
-  }, [selectedIndex, pages]);
+  }, [emblaApi, updateCarouselState]);
 
 
   return (
@@ -123,10 +69,6 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                   page={page}
                   pageIndex={index}
                   totalPages={pages.length}
-                  isPlaying={isPlaying}
-                  handleAudioPlay={handleAudioPlay}
-                  handleAudioPause={handleAudioPause}
-                  audioRef={audioRef}
                 />
               </div>
             ))}

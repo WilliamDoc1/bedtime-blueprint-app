@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Play, Pause } from "lucide-react";
+// Removed Button, Play, Pause imports as they are no longer used here.
 
 interface StoryPage {
   image: string;
@@ -14,20 +13,13 @@ interface StoryPageLayoutProps {
   page: StoryPage;
   pageIndex: number;
   totalPages: number;
-  isPlaying: boolean;
-  handleAudioPlay: () => void;
-  handleAudioPause: () => void;
-  audioRef: React.RefObject<HTMLAudioElement>;
+  // Removed audio-related props
 }
 
 const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
   page,
   pageIndex,
   totalPages,
-  isPlaying,
-  handleAudioPlay,
-  handleAudioPause,
-  audioRef,
 }) => {
   // Check for known title pages to prevent drop cap styling on titles
   const isTitlePage = page.text === "The Lantern Tree" || page.text === "Luna and the Star Garden" || page.text === "TITLE PAGE";
@@ -72,19 +64,8 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
         </div>
 
         {/* Controls and Page Number */}
-        <div className="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center flex-shrink-0">
-          <div className="flex items-center space-x-3">
-            <audio ref={audioRef} src={page.audio} className="hidden" />
-            <Button
-              onClick={isPlaying ? handleAudioPause : handleAudioPlay}
-              variant="default"
-              size="lg"
-              className="bg-lavender-500 hover:bg-lavender-600 text-white text-base rounded-full px-6"
-            >
-              {isPlaying ? <Pause className="h-5 w-5 mr-2" /> : <Play className="h-5 w-5 mr-2" />}
-              {isPlaying ? "Pause" : "Listen"}
-            </Button>
-          </div>
+        <div className="mt-6 pt-4 border-t border-gray-200 flex justify-end items-center flex-shrink-0">
+          {/* Removed audio controls */}
           <p className="text-sm text-gray-600">Page {pageIndex + 1} of {totalPages}</p>
         </div>
       </div>
