@@ -26,7 +26,7 @@ interface SleepLogEntry {
   parent_notes: string | null;
 }
 
-const SleepLog: React.FC = () => {
+const SleepLogSummary: React.FC = () => {
   const { session } = useSession();
   const [sleepLogs, setSleepLogs] = useState<SleepLogEntry[]>([]);
   const [loading, setLoading] = useState(true);
@@ -60,12 +60,12 @@ const SleepLog: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4 bg-lavender-50 rounded-lg shadow-md">
-      <h1 className="text-4xl font-bold mb-4 text-sidebar-primary text-center">7-Day Sleep Log</h1>
+      <h1 className="text-4xl font-bold mb-4 text-sidebar-primary text-center">7-Day Sleep Log Summary</h1>
       <p className="text-lg mb-6 text-center text-gray-800">Review your child's sleep patterns over the last seven days.</p>
       
       <div className="flex justify-center mb-8">
         <Button asChild className="bg-gold-400 hover:bg-gold-500 text-white">
-          <Link to="/daily-log-form">Add New Sleep Log</Link>
+          <Link to="/daily-input">Add New Daily Log</Link>
         </Button>
       </div>
 
@@ -105,4 +105,4 @@ const SleepLog: React.FC = () => {
   );
 };
 
-export default SleepLog;
+export default SleepLogSummary;

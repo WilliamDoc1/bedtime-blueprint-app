@@ -38,13 +38,14 @@ import CloudPainter from "./pages/tales/CloudPainter";
 import Willow from "./pages/tales/Willow";
 
 // Import new/renamed template pages
-import SleepLog from "./pages/SleepLog";
+import SleepLogSummary from "./pages/SleepLog"; // Renamed component import
 import SelfCareTracker from "./pages/SelfCareTracker";
 import BedtimeJournalPrompts from "./pages/journal-prompts";
 import RoutineBuilder from "./pages/RoutineBuilder";
-import DailyLogFormPage from "./pages/DailyLogFormPage"; // Updated import name
+import DailyLogFormPage from "./pages/DailyLogFormPage";
 import BedtimeScripts from "./pages/scripts";
 import EnvironmentChecklist from "./pages/checklist";
+import TrackerHub from "./pages/TrackerHub";
 
 
 const queryClient = new QueryClient();
@@ -99,6 +100,7 @@ const AppContent = () => {
 const AppRoutes: React.FC = () => (
   <Routes>
     <Route path="/" element={<Index />} />
+    <Route path="/tracker-hub" element={<TrackerHub />} /> {/* New Tracker Hub */}
     <Route path="/guide/toc" element={<TableOfContents />} />
     <Route path="/guide/ch/1" element={<Chapter1 />} />
     <Route path="/guide/ch/2" element={<Chapter2 />} />
@@ -111,8 +113,9 @@ const AppRoutes: React.FC = () => (
     <Route path="/guide/ch/9" element={<Chapter9 />} />
     <Route path="/guide/ch/10" element={<Chapter10 />} />
     <Route path="/guide/ch/11" element={<Chapter11 />} />
-    <Route path="/log" element={<SleepLog />} />
-    <Route path="/daily-log-form" element={<DailyLogFormPage />} /> {/* New descriptive route */}
+    {/* Removed /log route */}
+    <Route path="/daily-input" element={<DailyLogFormPage />} /> {/* Renamed route */}
+    <Route path="/7-day-summary" element={<SleepLogSummary />} /> {/* New route for summary table */}
     <Route path="/self-care-tracker" element={<SelfCareTracker />} />
     <Route path="/journal-prompts" element={<BedtimeJournalPrompts />} />
     <Route path="/routine-builder" element={<RoutineBuilder />} />

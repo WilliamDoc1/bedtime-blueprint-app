@@ -19,7 +19,7 @@ export const MobileSidebar: React.FC = () => {
     },
     {
       title: "Tracker",
-      href: "/daily-log-form", // Updated route
+      href: "/tracker-hub", // Updated route to hub
       icon: <LayoutDashboard className="mr-2 h-4 w-4" />,
     },
     {
