@@ -108,7 +108,7 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
   const currentStoryPage = pages[selectedIndex];
 
   return (
-    <div className="container mx-auto p-4 max-w-5xl">
+    <div className="container mx-auto p-4 max-w-3xl">
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">{title}</h1>
 
       <div className="relative bg-white shadow-2xl rounded-xl overflow-hidden border-4 border-gold-400">
@@ -116,9 +116,11 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
           <div className="embla__container flex">
             {pages.map((page, index) => (
               <div className="embla__slide flex-[0_0_100%] min-w-0" key={index}>
-                <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[500px]">
-                  {/* Left Side: Image */}
-                  <div className="relative overflow-hidden">
+                {/* Single Column Layout: Image above Text */}
+                <div className="flex flex-col h-full min-h-[600px]">
+                  
+                  {/* Top: Image */}
+                  <div className="relative overflow-hidden h-64 md:h-96">
                     <img
                       src={page.image}
                       alt={`Story page ${index + 1}`}
@@ -126,19 +128,19 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                     />
                   </div>
 
-                  {/* Right Side: Text and Controls */}
-                  <div className="p-6 md:p-10 flex flex-col justify-between bg-gray-50/50">
-                    <div className="text-lg leading-relaxed text-gray-800 font-serif">
-                      {/* Simple text rendering. For complex formatting, this would need markdown or rich text parsing. */}
+                  {/* Bottom: Text and Controls */}
+                  <div className="p-6 md:p-8 flex flex-col justify-between bg-gray-50/50 flex-1">
+                    <div className="text-base leading-relaxed text-gray-800 font-serif overflow-y-auto">
+                      {/* Simple text rendering. */}
                       {page.text.split('\n').map((paragraph, i) => (
-                        <p key={i} className={cn("mb-4", i === 0 && page.text.length > 50 && "first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-lavender-500")}>
+                        <p key={i} className={cn("mb-3", i === 0 && page.text.length > 50 && "first-letter:text-4xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-lavender-500")}>
                           {paragraph}
                         </p>
                       ))}
                     </div>
                     
                     {/* Controls and Page Number */}
-                    <div className="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center">
+                    <div className="mt-4 pt-4 border-t border-gray-200 flex justify-between items-center flex-shrink-0">
                       <div className="flex items-center space-x-3">
                         <audio ref={audioRef} onEnded={handleAudioEnded} src={page.audio} className="hidden" />
                         <Button
