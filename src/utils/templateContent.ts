@@ -1,21 +1,5 @@
 export const printableToolkitTemplates = [
   {
-    id: "tracker",
-    title: "Daily Sleep Log Form",
-    description: "Record your child's sleep details for a specific day.",
-    type: "internal-link",
-    linkText: "Fill Out Daily Input",
-    internalLink: "/daily-input",
-  },
-  {
-    id: "self-care-tracker",
-    title: "Self-Care Tracker for Parents",
-    description: "Monitor your own rest and well-being to better support your child.",
-    type: "internal-link",
-    linkText: "View Self-Care Tracker",
-    internalLink: "/self-care-tracker",
-  },
-  {
     id: "journal",
     title: "Reflection Journal Prompts",
     description: "Guided prompts to process your parenting journey and celebrate progress.",
@@ -30,5 +14,21 @@ export const printableToolkitTemplates = [
     type: "internal-link",
     linkText: "Start Routine Builder",
     internalLink: "/routine-builder",
+  },
+  {
+    id: "scripts",
+    title: "Bedtime Scripts",
+    description: "Ready-to-use phrases for calm transitions and night wakings.",
+    type: "internal-link",
+    linkText: "View Scripts",
+    internalLink: "/scripts",
+  },
+  {
+    id: "checklist",
+    title: "Sleep Environment Setup Checklist",
+    description: "A checklist to ensure your child's room supports calm, predictable sleep.",
+    type: "internal-link",
+    linkText: "View Checklist",
+    internalLink: "/checklist",
   },
 ];
