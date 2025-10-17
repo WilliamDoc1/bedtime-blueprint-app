@@ -38,7 +38,6 @@ import CloudPainter from "./pages/tales/CloudPainter";
 import Willow from "./pages/tales/Willow";
 
 // Import new/renamed template pages
-import SleepLogSummary from "./pages/SleepLog"; // Renamed component import
 import SelfCareTracker from "./pages/SelfCareTracker";
 import BedtimeJournalPrompts from "./pages/journal-prompts";
 import RoutineBuilder from "./pages/RoutineBuilder";
@@ -113,9 +112,7 @@ const AppRoutes: React.FC = () => (
     <Route path="/guide/ch/9" element={<Chapter9 />} />
     <Route path="/guide/ch/10" element={<Chapter10 />} />
     <Route path="/guide/ch/11" element={<Chapter11 />} />
-    {/* Removed /log route */}
     <Route path="/daily-input" element={<DailyLogFormPage />} /> {/* Renamed route */}
-    <Route path="/7-day-summary" element={<SleepLogSummary />} /> {/* New route for summary table */}
     <Route path="/self-care-tracker" element={<SelfCareTracker />} />
     <Route path="/journal-prompts" element={<BedtimeJournalPrompts />} />
     <Route path="/routine-builder" element={<RoutineBuilder />} />

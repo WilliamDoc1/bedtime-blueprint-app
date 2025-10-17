@@ -3,7 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { LayoutDashboard, Heart, CalendarCheck } from "lucide-react";
+import { Heart, CalendarCheck } from "lucide-react";
 
 const TrackerHub: React.FC = () => {
   const trackerItems = [
@@ -18,12 +18,6 @@ const TrackerHub: React.FC = () => {
       description: "Monitor your own calm, gratitude, and sleep quality.",
       route: "/self-care-tracker",
       icon: <Heart className="h-8 w-8 text-gold-500" />,
-    },
-    {
-      title: "7-Day Sleep Summary",
-      description: "Review your child's sleep patterns and progress over the last week.",
-      route: "/7-day-summary",
-      icon: <LayoutDashboard className="h-8 w-8 text-sidebar-primary-foreground" />,
     },
   ];
 

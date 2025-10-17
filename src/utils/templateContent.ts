@@ -1,13 +1,5 @@
 export const printableToolkitTemplates = [
   {
-    id: "log",
-    title: "7-Day Sleep Log Summary",
-    description: "Track sleep patterns, wake-ups, and parent calm for a full week.",
-    type: "internal-link",
-    linkText: "View Sleep Summary",
-    internalLink: "/7-day-summary",
-  },
-  {
     id: "tracker",
     title: "Daily Sleep Log Form",
     description: "Record your child's sleep details for a specific day.",
