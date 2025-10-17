@@ -43,7 +43,7 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 8,
-    image: '/The Cloud Painter/cloud_painter_page_7.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_5.jpg',
     text: "“I want to paint the clouds,” Pip said, his voice small but steady, “so everyone below can see how beautiful the morning is.”",
     audio: "/placeholder_audio.mp3",
   },
