@@ -23,7 +23,6 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audioEnded, setAudioEnded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const updateCarouselState = useCallback((emblaApi: any) => {
@@ -38,7 +37,6 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
       audioRef.current.currentTime = 0;
     }
     setIsPlaying(false);
-    setAudioEnded(false);
   }, []);
 
   const scrollPrev = useCallback(() => {
@@ -61,7 +59,6 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
         console.warn("Audio playback failed:", error);
       });
       setIsPlaying(true);
-      setAudioEnded(false);
     }
   };
 
@@ -74,7 +71,6 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
 
   const handleAudioEnded = () => {
     setIsPlaying(false);
-    setAudioEnded(true);
   };
 
   // Effect to handle carousel state updates and manual navigation audio reset
@@ -105,7 +101,6 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
       audioRef.current.onended = handleAudioEnded;
       // Do not autoplay, wait for user interaction
       setIsPlaying(false);
-      setAudioEnded(false);
     }
   }, [selectedIndex, pages]);
 
@@ -113,30 +108,65 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
   const currentStoryPage = pages[selectedIndex];
 
   return (
-    <div className="container mx-auto p-4 max-w-3xl">
-      <h1 className="text-3xl font-bold mb-6 text-center text-sidebar-primary-foreground">{title}</h1>
+    <div className="container mx-auto p-4 max-w-5xl">
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">{title}</h1>
 
-      <div className="relative">
+      <div className="relative bg-white shadow-2xl rounded-xl overflow-hidden border-4 border-gold-400">
         <div className="embla" ref={emblaRef}>
           <div className="embla__container flex">
             {pages.map((page, index) => (
               <div className="embla__slide flex-[0_0_100%] min-w-0" key={index}>
-                <img
-                  src={page.image}
-                  alt={`Story page ${index + 1}`}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
+                <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[500px]">
+                  {/* Left Side: Image */}
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={page.image}
+                      alt={`Story page ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Right Side: Text and Controls */}
+                  <div className="p-6 md:p-10 flex flex-col justify-between bg-gray-50/50">
+                    <div className="text-lg leading-relaxed text-gray-800 font-serif">
+                      {/* Simple text rendering. For complex formatting, this would need markdown or rich text parsing. */}
+                      {page.text.split('\n').map((paragraph, i) => (
+                        <p key={i} className={cn("mb-4", i === 0 && page.text.length > 50 && "first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-lavender-500")}>
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                    
+                    {/* Controls and Page Number */}
+                    <div className="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center">
+                      <div className="flex items-center space-x-3">
+                        <audio ref={audioRef} onEnded={handleAudioEnded} src={page.audio} className="hidden" />
+                        <Button
+                          onClick={isPlaying ? handleAudioPause : handleAudioPlay}
+                          variant="secondary"
+                          size="sm"
+                          className="bg-lavender-400 hover:bg-lavender-500 text-white"
+                        >
+                          {isPlaying ? <Pause className="h-4 w-4 mr-2" /> : <Play className="h-4 w-4 mr-2" />}
+                          {isPlaying ? "Pause" : "Listen"}
+                        </Button>
+                      </div>
+                      <p className="text-sm text-gray-600">Page {index + 1} of {pages.length}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Navigation Buttons (Outside the slide content) */}
         <Button
           onClick={scrollPrev}
           disabled={!canScrollPrev}
           variant="outline"
           size="icon"
-          className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2"
+          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg"
         >
           <ArrowLeft className="h-4 w-4" />
         </Button>
@@ -145,30 +175,10 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
           disabled={!canScrollNext}
           variant="outline"
           size="icon"
-          className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2"
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg"
         >
           <ArrowRight className="h-4 w-4" />
         </Button>
-      </div>
-
-      <div className="mt-6 p-4 bg-lavender-50 rounded-lg shadow-inner border border-lavender-200">
-        <div className="flex items-center justify-center mb-4">
-          <audio ref={audioRef} controls className="w-full max-w-md hidden">
-            Your browser does not support the audio element.
-          </audio>
-          <Button
-            onClick={isPlaying ? handleAudioPause : handleAudioPlay}
-            variant="secondary"
-            className="bg-lavender-400 hover:bg-lavender-500 text-white"
-          >
-            {isPlaying ? <Pause className="h-5 w-5 mr-2" /> : <Play className="h-5 w-5 mr-2" />}
-            {isPlaying ? "Pause Audio" : "Play Audio"}
-          </Button>
-        </div>
-        <p className="text-lg leading-relaxed text-gray-800 text-center">
-          {currentStoryPage.text}
-        </p>
-        <p className="text-sm text-gray-600 text-center mt-4">Page {selectedIndex + 1} of {pages.length}</p>
       </div>
     </div>
   );
