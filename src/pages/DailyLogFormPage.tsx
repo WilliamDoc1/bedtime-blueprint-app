@@ -3,7 +3,7 @@
 import React from "react";
 import DailySleepLogForm from "@/components/DailySleepLogForm";
 
-const TrackerPage: React.FC = () => {
+const DailyLogFormPage: React.FC = () => {
   return (
     <div className="content-wrapper p-6 md:p-8 max-w-xl mx-auto bg-lavender-50 rounded-lg shadow-md">
       <h1 className="text-3xl font-bold text-center mb-6 text-sidebar-primary-foreground">Daily Sleep Log Form</h1>
@@ -13,4 +13,4 @@ const TrackerPage: React.FC = () => {
   );
 };
 
-export default TrackerPage;
+export default DailyLogFormPage;

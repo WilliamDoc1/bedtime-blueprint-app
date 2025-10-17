@@ -65,7 +65,7 @@ const SleepLog: React.FC = () => {
       
       <div className="flex justify-center mb-8">
         <Button asChild className="bg-gold-400 hover:bg-gold-500 text-white">
-          <Link to="/tracker">Add New Sleep Log</Link>
+          <Link to="/daily-log-form">Add New Sleep Log</Link>
         </Button>
       </div>
 

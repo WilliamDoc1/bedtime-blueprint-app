@@ -40,11 +40,11 @@ import Willow from "./pages/tales/Willow";
 // Import new/renamed template pages
 import SleepLog from "./pages/SleepLog";
 import SelfCareTracker from "./pages/SelfCareTracker";
-import BedtimeJournalPrompts from "./pages/journal-prompts"; // Corrected import name and path
+import BedtimeJournalPrompts from "./pages/journal-prompts";
 import RoutineBuilder from "./pages/RoutineBuilder";
-import Tracker from "./pages/Tracker"; // Import the new Tracker component
-import BedtimeScripts from "./pages/scripts"; // Import the new BedtimeScripts component
-import EnvironmentChecklist from "./pages/checklist"; // Import the new Checklist component
+import DailyLogFormPage from "./pages/DailyLogFormPage"; // Updated import name
+import BedtimeScripts from "./pages/scripts";
+import EnvironmentChecklist from "./pages/checklist";
 
 
 const queryClient = new QueryClient();
@@ -112,9 +112,9 @@ const AppRoutes: React.FC = () => (
     <Route path="/guide/ch/10" element={<Chapter10 />} />
     <Route path="/guide/ch/11" element={<Chapter11 />} />
     <Route path="/log" element={<SleepLog />} />
-    <Route path="/tracker" element={<Tracker />} />
+    <Route path="/daily-log-form" element={<DailyLogFormPage />} /> {/* New descriptive route */}
     <Route path="/self-care-tracker" element={<SelfCareTracker />} />
-    <Route path="/journal-prompts" element={<BedtimeJournalPrompts />} /> {/* Updated component name */}
+    <Route path="/journal-prompts" element={<BedtimeJournalPrompts />} />
     <Route path="/routine-builder" element={<RoutineBuilder />} />
     <Route path="/templates" element={<Templates />} />
     <Route path="/tales/toc" element={<MoonlightStories />} />

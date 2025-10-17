@@ -17,7 +17,7 @@ export const SidebarNav: React.FC = () => {
     },
     {
       title: "Tracker",
-      href: "/tracker",
+      href: "/daily-log-form", // Updated route
       icon: <LayoutDashboard className="mr-2 h-4 w-4" />,
     },
     {

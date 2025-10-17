@@ -13,7 +13,7 @@ export const printableToolkitTemplates = [
     description: "Record your child's sleep details for a specific day.",
     type: "internal-link",
     linkText: "Fill Out Log Form",
-    internalLink: "/tracker",
+    internalLink: "/daily-log-form",
   },
   {
     id: "self-care-tracker",
