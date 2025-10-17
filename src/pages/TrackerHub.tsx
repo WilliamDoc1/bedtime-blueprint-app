@@ -26,7 +26,7 @@ const TrackerHub: React.FC = () => {
       <h1 className="text-4xl font-bold mb-4 text-sidebar-primary text-center">Your Sleep Tracking Hub</h1>
       <p className="text-lg mb-8 text-center text-gray-800">Select a tool to track your progress and well-being.</p>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {trackerItems.map((item) => (
           <Link to={item.route} key={item.route} className="block">
             <Card className="h-full flex flex-col justify-between p-6 transition-shadow duration-300 hover:shadow-xl hover:border-lavender-500 border-2 border-gray-200">
