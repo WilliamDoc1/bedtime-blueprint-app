@@ -32,25 +32,34 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
     setCanScrollNext(emblaApi.canScrollNext());
   }, []);
 
+  const stopAndResetAudio = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    setIsPlaying(false);
+    setAudioEnded(false);
+  }, []);
+
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollPrev();
-      setAudioEnded(false); // Reset audio state on navigation
-      setIsPlaying(false);
+      stopAndResetAudio();
     }
-  }, [emblaApi]);
+  }, [emblaApi, stopAndResetAudio]);
 
   const scrollNext = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollNext();
-      setAudioEnded(false); // Reset audio state on navigation
-      setIsPlaying(false);
+      stopAndResetAudio();
     }
-  }, [emblaApi]);
+  }, [emblaApi, stopAndResetAudio]);
 
   const handleAudioPlay = () => {
     if (audioRef.current) {
-      audioRef.current.play();
+      audioRef.current.play().catch(error => {
+        console.warn("Audio playback failed:", error);
+      });
       setIsPlaying(true);
       setAudioEnded(false);
     }
@@ -68,6 +77,7 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
     setAudioEnded(true);
   };
 
+  // Effect to handle carousel state updates and manual navigation audio reset
   useEffect(() => {
     if (!emblaApi) return;
 
@@ -75,31 +85,26 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
     emblaApi.on("reInit", updateCarouselState);
     updateCarouselState(emblaApi);
 
-    // Autoplay audio on slide change
-    if (audioRef.current) {
-      audioRef.current.load(); // Load new audio source
-      audioRef.current.play().catch(error => {
-        console.warn("Autoplay prevented:", error);
-        // User interaction might be needed for autoplay
-        setIsPlaying(false);
-      });
-      setIsPlaying(true);
-      setAudioEnded(false);
+    const handleSelect = () => {
+      stopAndResetAudio();
+    };
+    
+    emblaApi.on("select", handleSelect);
+    
+    return () => {
+      emblaApi.off("select", handleSelect);
     }
 
-  }, [emblaApi, selectedIndex, updateCarouselState]);
+  }, [emblaApi, updateCarouselState, stopAndResetAudio]);
 
-  // Effect to handle audio loading and playing when selectedIndex changes
+  // Effect to handle audio source loading when selectedIndex changes
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.src = pages[selectedIndex].audio;
       audioRef.current.load();
       audioRef.current.onended = handleAudioEnded;
-      audioRef.current.play().catch(error => {
-        console.warn("Autoplay prevented:", error);
-        setIsPlaying(false);
-      });
-      setIsPlaying(true);
+      // Do not autoplay, wait for user interaction
+      setIsPlaying(false);
       setAudioEnded(false);
     }
   }, [selectedIndex, pages]);
@@ -128,7 +133,7 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
 
         <Button
           onClick={scrollPrev}
-          disabled={!canScrollPrev || isPlaying}
+          disabled={!canScrollPrev}
           variant="outline"
           size="icon"
           className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2"
@@ -137,7 +142,7 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
         </Button>
         <Button
           onClick={scrollNext}
-          disabled={!canScrollNext || isPlaying || !audioEnded}
+          disabled={!canScrollNext}
           variant="outline"
           size="icon"
           className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2"
