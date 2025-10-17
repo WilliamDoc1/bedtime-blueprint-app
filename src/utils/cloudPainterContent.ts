@@ -61,7 +61,7 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 11,
-    image: '/The Cloud Painter/cloud_painter_page_10.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_8.jpg',
     text: "Down below, the world awoke to a sky blushing with color. Children pointed, and sleepy animals smiled. And high on the mountain, a tiny mouse with a very big dream snuggled into a mossy bed, tired but happy, knowing he had painted the world a little more beautiful.",
     audio: "/placeholder_audio.mp3",
   }
