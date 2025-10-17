@@ -28,10 +28,10 @@ const StoryPageLayout: React.FC<StoryPageLayoutProps> = ({
 
   // Specific styling for covers to crop the bottom white space
   const isLanternTreeCover = isCoverPage && page.image.includes("Lantern Tree Cover Page.png");
-  const isMiloCover = isCoverPage && page.image.includes("Milo Cover.jpg");
+  // Removed isMiloCover from the object-top condition to allow default centering (object-cover)
   
   let objectPositionClass = "object-cover";
-  if (isLanternTreeCover || isMiloCover) {
+  if (isLanternTreeCover) {
     objectPositionClass = "object-cover object-top";
   }
 
