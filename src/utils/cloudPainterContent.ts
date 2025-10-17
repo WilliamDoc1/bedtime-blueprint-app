@@ -49,7 +49,7 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 9,
-    image: '/The Cloud Painter/cloud_painter_page_8.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_6.jpg',
     text: "The Wind hummed thoughtfully. \"What a lovely dream,\" it sighed. \"Let me help you.\" Gently, the Wind lifted Pip and his colors into the air.",
     audio: "/placeholder_audio.mp3",
   },
