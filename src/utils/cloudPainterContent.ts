@@ -25,7 +25,7 @@ export const CLOUD_PAINTER_STORY_PAGES = [
   },
   {
     page: 5,
-    image: '/The Cloud Painter/cloud_painter_page_4.jpg',
+    image: '/The Cloud Painter/cloud_painter_page_2.jpg',
     text: "With his tiny paintbrush in hand, he began to climb the tallest peak, the one that tickled the tummy of the morning sky.",
     audio: "/placeholder_audio.mp3",
   },
