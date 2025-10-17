@@ -4,7 +4,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, BookText, LayoutDashboard, Palette, Sparkles, ScrollText, ListChecks } from "lucide-react"; // Added ListChecks icon
+import { Menu, BookText, LayoutDashboard, Sparkles, ScrollText, ListChecks, NotebookText, Settings } from "lucide-react"; // Updated imports
 import { cn } from "@/lib/utils";
 
 export const MobileSidebar: React.FC = () => {
@@ -19,13 +19,18 @@ export const MobileSidebar: React.FC = () => {
     },
     {
       title: "Tracker",
-      href: "/tracker-hub", // Updated route to hub
+      href: "/tracker-hub",
       icon: <LayoutDashboard className="mr-2 h-4 w-4" />,
     },
     {
-      title: "Templates",
-      href: "/templates",
-      icon: <Palette className="mr-2 h-4 w-4" />,
+      title: "Reflection Journal",
+      href: "/journal-prompts",
+      icon: <NotebookText className="mr-2 h-4 w-4" />,
+    },
+    {
+      title: "Routine Builder",
+      href: "/routine-builder",
+      icon: <Settings className="mr-2 h-4 w-4" />,
     },
     {
       title: "Moonlight Stories",
@@ -38,9 +43,9 @@ export const MobileSidebar: React.FC = () => {
       icon: <ScrollText className="mr-2 h-4 w-4" />,
     },
     {
-      title: "Checklist", // New navigation item
+      title: "Checklist",
       href: "/checklist",
-      icon: <ListChecks className="mr-2 h-4 w-4" />, // Icon for checklist
+      icon: <ListChecks className="mr-2 h-4 w-4" />,
     },
   ];
 

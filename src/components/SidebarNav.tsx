@@ -4,7 +4,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { BookText, LayoutDashboard, Palette, Sparkles, ScrollText, ListChecks } from "lucide-react"; // Added ListChecks icon
+import { BookText, LayoutDashboard, Sparkles, ScrollText, ListChecks, NotebookText, Settings } from "lucide-react"; // Added NotebookText and Settings icons
 
 export const SidebarNav: React.FC = () => {
   const location = useLocation();
@@ -17,13 +17,18 @@ export const SidebarNav: React.FC = () => {
     },
     {
       title: "Tracker",
-      href: "/tracker-hub", // Updated route to hub
+      href: "/tracker-hub",
       icon: <LayoutDashboard className="mr-2 h-4 w-4" />,
     },
     {
-      title: "Templates",
-      href: "/templates",
-      icon: <Palette className="mr-2 h-4 w-4" />,
+      title: "Reflection Journal",
+      href: "/journal-prompts",
+      icon: <NotebookText className="mr-2 h-4 w-4" />,
+    },
+    {
+      title: "Routine Builder",
+      href: "/routine-builder",
+      icon: <Settings className="mr-2 h-4 w-4" />,
     },
     {
       title: "Moonlight Stories",
@@ -36,9 +41,9 @@ export const SidebarNav: React.FC = () => {
       icon: <ScrollText className="mr-2 h-4 w-4" />,
     },
     {
-      title: "Checklist", // New navigation item
+      title: "Checklist",
       href: "/checklist",
-      icon: <ListChecks className="mr-2 h-4 w-4" />, // Icon for checklist
+      icon: <ListChecks className="mr-2 h-4 w-4" />,
     },
   ];
 
