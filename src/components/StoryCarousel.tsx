@@ -109,8 +109,6 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
   }, [selectedIndex, pages]);
 
 
-  const currentStoryPage = pages[selectedIndex];
-
   return (
     <div className="container mx-auto p-4 max-w-5xl">
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">{title}</h1>
@@ -120,28 +118,20 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
           <div className="embla__container flex">
             {pages.map((page, index) => (
               <div className="embla__slide flex-[0_0_100%] min-w-0" key={index}>
-                <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[500px]">
-                  {/* Left Side: Image */}
-                  <div className="relative overflow-hidden">
+                {/* Single Column Layout: Image on top, Text below */}
+                <div className="flex flex-col h-full min-h-[600px] bg-white">
+                  
+                  {/* Image Area (approx 60% height) */}
+                  <div className="relative overflow-hidden flex-grow max-h-[60%]">
                     <img
                       src={page.image}
                       alt={`Story page ${index + 1}`}
                       className="w-full h-full object-cover"
                     />
-                    {/* Previous Button - Positioned relative to the image panel */}
-                    <Button
-                      onClick={scrollPrev}
-                      disabled={!canScrollPrev}
-                      variant="outline"
-                      size="icon"
-                      className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
-                    >
-                      <ArrowLeft className="h-5 w-5" />
-                    </Button>
                   </div>
 
-                  {/* Right Side: Text and Controls */}
-                  <div className="p-6 md:p-10 flex flex-col justify-between bg-white relative">
+                  {/* Text Area (approx 40% height, scrollable if needed) */}
+                  <div className="p-6 md:p-10 flex flex-col justify-between relative flex-shrink-0 h-[40%] overflow-y-auto">
                     <div className="text-lg leading-relaxed text-gray-800 font-serif">
                       {page.text.split('\n').map((paragraph, i) => {
                         // Apply drop cap only to the first paragraph of non-title/end pages
@@ -162,7 +152,7 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                     </div>
                     
                     {/* Controls and Page Number */}
-                    <div className="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center">
+                    <div className="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center flex-shrink-0">
                       <div className="flex items-center space-x-3">
                         <audio ref={audioRef} onEnded={handleAudioEnded} src={page.audio} className="hidden" />
                         <Button
@@ -177,23 +167,35 @@ const StoryCarousel: React.FC<StoryCarouselProps> = ({ pages, title }) => {
                       </div>
                       <p className="text-sm text-gray-600">Page {index + 1} of {pages.length}</p>
                     </div>
-
-                    {/* Next Button - Positioned absolutely in the top right of the text panel */}
-                    <Button
-                      onClick={scrollNext}
-                      disabled={!canScrollNext}
-                      variant="outline"
-                      size="icon"
-                      className="absolute top-4 right-4 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
-                    >
-                      <ArrowRight className="h-5 w-5" />
-                    </Button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
+        {/* Navigation Buttons (Positioned relative to the book container) */}
+        {/* Previous Button */}
+        <Button
+          onClick={scrollPrev}
+          disabled={!canScrollPrev}
+          variant="outline"
+          size="icon"
+          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
+        >
+          <ArrowLeft className="h-5 w-5" />
+        </Button>
+        
+        {/* Next Button */}
+        <Button
+          onClick={scrollNext}
+          disabled={!canScrollNext}
+          variant="outline"
+          size="icon"
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-white border-gold-400 border-2 z-20 shadow-lg h-10 w-10"
+        >
+          <ArrowRight className="h-5 w-5" />
+        </Button>
       </div>
     </div>
   );
