@@ -5,7 +5,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "ALLOW" 
-    # Note: Netlify is often flexible and will not force X-Frame-Options if it's set to ALLOW.
-    Content-Security-Policy = "frame-ancestors 'self' whop.com *.whop.com" 
-    # This CSP rule explicitly allows whop.com to embed the app.
+    Content-Security-Policy = "frame-ancestors 'self' https://whop.com https://*.whop.com" 
